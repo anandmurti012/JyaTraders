@@ -119,11 +119,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                             </ul>
                                         </div>
                                     </nav>
-
-                                    <div>
-                                        <button className="btn btn-primary">Signup</button>
-                                        <button className="btn btn-primary" style={{ marginLeft: '10px' }}>Login</button>
-                                    </div>
                                 </div>
                                 {/* Mobile Menu  */}
                                 <div className="mobile-menu">
@@ -160,7 +155,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                 <SearchPopup isSearch={isSearch} handleSearch={handleSearch} />
                 <OffcanvusMenu isOffcanvus={isOffcanvus} handleOffcanvus={handleOffcanvus} />
             </header>
-
 
         </>
     )

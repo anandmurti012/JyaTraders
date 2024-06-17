@@ -19,12 +19,19 @@ export default function Banner() {
                             </div>
                         </div>
                         <div className="col-lg-6">
+                            <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '-30px' }}>
+                                <button className="btn btn-primary" style={{ marginTop: '0' }}>Signup</button>
+                                <button className="btn btn-primary" style={{ marginLeft: '10px', marginTop: '0' }}>Login</button>
+                            </div>
                             <div className="banner-img text-center">
                                 <img src="/assets/img/banner/h2_banner_img.png" alt="" data-aos="fade-left" data-aos-delay={400} />
                             </div>
                         </div>
+
+
                     </div>
                 </div>
+
                 <div className="banner-shape-wrap">
                     <img src="/assets/img/banner/h2_banner_shape01.png" alt="" />
                     <img src="/assets/img/banner/h2_banner_shape02.png" alt="" />
