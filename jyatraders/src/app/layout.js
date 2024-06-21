@@ -13,7 +13,6 @@ import "../../public/assets/css/aos.css"
 import "../../public/assets/css/default.css"
 import "../../public/assets/css/style.css"
 import "../../public/assets/css/responsive.css"
-import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Providers>{children}</Providers></body>
+      {children}</body>
     </html>
   );
 }

@@ -1,4 +1,4 @@
-import BrandSlider from "@/components/slider/BrandSlider"
+import BrandSlider from "../../../components/slider/BrandSlider"
 
 export default function Brand() {
     return (
