@@ -9,41 +9,54 @@ export default function Choose() {
                 </div>
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-lg-6">
-                            <div className="choose-content">
+                        <div className="col-lg-4">
+                            <div className="">
                                 <div className="section-title-two white-title mb-20 tg-heading-subheading animation-style3">
                                     <h2 className="title tg-element-title">We’ll Ensure You Always Get the Best Guidance.</h2>
                                 </div>
-                                <p>Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor sit amet, consecteture.Borem.</p>
+                                {/* <p>Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor sit amet, consecteture.Borem.</p> */}
                                 {/* <VideoPopup style={2} /> */}
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-8">
                             <div className="skill-wrap wow fadeInRight" data-wow-delay=".2s">
                                 <div className="section-title-two mb-15">
-                                    <span className="sub-title">Why We are The Best</span>
-                                    <h2 className="title">Smart  Great Finance For you Solutions</h2>
+                                    <span className="sub-title">Why Choose Us?</span>
+                                    <h2 className="title">Your Gateway to Financial Excellence</h2>
                                 </div>
-                                <p>Morem ipsum dolor sit amet consectedipiscing elita florai psum dolor sit amonsectet Borem ipsum consectetur.</p>
+
                                 <div className="progress-wrap">
                                     <div className="progress-item">
-                                        <h6 className="title">Consulting</h6>
-                                        <div className="progress" role="progressbar" aria-label="Example with label" aria-valuenow={85} aria-valuemin={0} aria-valuemax={100}>
-                                            <div className="progress-bar wow slideInLeft" data-wow-delay=".1s" style={{ width: '85%' }}><span>85%</span></div>
-                                        </div>
+                                        <h6 className="title">
+                                            <b>Comprehensive Training Programs:</b>
+                                        </h6>
+                                        <span>From NISM Certification to Cryptocurrency Trading, we cover it all.</span>
                                     </div>
                                     <div className="progress-item">
-                                        <h6 className="title">Investment</h6>
-                                        <div className="progress" role="progressbar" aria-label="Example with label" aria-valuenow={76} aria-valuemin={0} aria-valuemax={100}>
-                                            <div className="progress-bar wow slideInLeft" data-wow-delay=".2s" style={{ width: '76%' }}><span>76%</span></div>
-                                        </div>
+                                        <h6 className="title">
+                                            <b>Diverse Trading Options:</b>
+                                        </h6>
+                                        <span>Trade in cash, commodities, forex, and more with our robust platform.</span>
                                     </div>
                                     <div className="progress-item">
-                                        <h6 className="title">Business</h6>
-                                        <div className="progress" role="progressbar" aria-label="Example with label" aria-valuenow={90} aria-valuemin={0} aria-valuemax={100}>
-                                            <div className="progress-bar wow slideInLeft" data-wow-delay=".3s" style={{ width: '90%' }}><span>90%</span></div>
-                                        </div>
+                                        <h6 className="title">
+                                            <b>Expert Wealth Management:</b>
+                                        </h6>
+                                        <span>Secure your future with retirement planning, fixed deposits, and consultancy services.</span>
                                     </div>
+                                    <div className="progress-item">
+                                        <h6 className="title">
+                                            <b>Comprehensive Training Programs:</b>
+                                        </h6>
+                                        <span>From NISM Certification to Cryptocurrency Trading, we cover it all.</span>
+                                    </div>
+                                    <div className="progress-item">
+                                        <h6 className="title">
+                                            <b>Trusted Partnerships</b>
+                                        </h6>
+                                        <span>Benefit from zero fee account opening with Kotak Securities and comprehensive insurance plans with Tata AIA.</span>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

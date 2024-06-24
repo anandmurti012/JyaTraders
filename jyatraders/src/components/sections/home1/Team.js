@@ -4,7 +4,7 @@ export default function Team() {
     return (
         <>
             <section className="team-area-two">
-                <div className="team-shape">
+                {/* <div className="team-shape">
                     <img src="/assets/img/team/team_shape.png" alt="" data-aos="fade-right" data-aos-delay={200} />
                 </div>
                 <div className="container">
@@ -99,7 +99,7 @@ export default function Team() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
         </>
     )

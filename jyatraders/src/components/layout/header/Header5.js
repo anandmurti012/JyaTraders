@@ -1,6 +1,5 @@
 import Link from "next/link"
 import MobileMenu from "../MobileMenu"
-import SearchPopup from "../SearchPopup"
 
 export default function Header5({ scroll, isMobileMenu, handleMobileMenu, isSearch, handleSearch, isOffcanvus, handleOffcanvus }) {
     return (
@@ -139,7 +138,6 @@ export default function Header5({ scroll, isMobileMenu, handleMobileMenu, isSear
                         </div>
                     </div>
                 </div>
-                <SearchPopup isSearch={isSearch} handleSearch={handleSearch} />
             </header>
 
         </>

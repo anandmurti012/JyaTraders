@@ -20,11 +20,22 @@ export default function Overview() {
                         <div className="col-lg-6">
                             <div className="overview-content">
                                 <div className="section-title-two mb-20 tg-heading-subheading animation-style3">
-                                    <span className="sub-title">Company Overview</span>
-                                    <h2 className="title tg-element-title">Plan your business strategy with Our Experts</h2>
+                                    <span className="sub-title">Unlock Your Potential, </span>
+                                    <h2 className="title tg-element-title">With JYA Traders Training Programs</h2>
                                 </div>
-                                <p className="info-one">Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor sit amet, consecteture.Borem ipsum dolor sit amet, consectetur adipiscing elita florai psum.</p>
-                                <p className="info-two">Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor sit amet, consecteture.Borem.</p>
+                                <p className="info-one">
+                                    <b>NISM Certification: </b> Achieve professional certification and validate your expertise in the financial markets.
+                                </p>
+                                <p className="info-two">
+                                    <b>Zero Loss Psychology: </b> Master the mindset required to minimize losses and maximize gains in trading.
+                                </p>
+                                <p className="info-two">
+                                    <b>Diverse Market Training: </b> Gain in-depth knowledge of Derivatives, Currency, Commodity, and Forex trading.
+                                </p>
+                                <p className="info-two">
+                                    <b>Specialized Trading Techniques: </b> Learn strategies for Intraday, Delivery, Swing Trading, and Long-term & Short-term investments.
+                                </p>
+
                                 <div className="content-bottom">
                                     <ul className="list-wrap">
                                         <li>

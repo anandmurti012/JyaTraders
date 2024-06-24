@@ -11,10 +11,20 @@ export default function Footer2() {
                                 <div className="col-lg-4 col-md-7">
                                     <div className="footer-widget">
                                         <div className="fw-logo">
-                                            <Link href="/"><img src="/assets/img/logo/logo.png" alt="" /></Link>
+                                            <Link href="/">
+                                                <img
+                                                    src="/images/logo 500.png"
+                                                    alt=""
+                                                    style={{
+                                                        borderRadius:10,
+                                                    }}
+                                                />
+                                            </Link>
                                         </div>
                                         <div className="footer-content">
-                                            <p>When an unknown printer took a galley of type aawer awtnd scrambled it to make a type specimen book.</p>
+                                            <p>
+                                            Located in Begusarai, Visanpur, Bihar, JYA Traders is your local gateway to global financial opportunities.
+                                            </p>
                                             <div className="footer-info">
                                                 <ul className="list-wrap">
                                                     <li>

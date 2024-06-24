@@ -20,6 +20,6 @@ export const config = {
     matcher: [
         '/',
         '/dashboard',
-        '/apply'
+        '/apply',
     ]
 }

@@ -50,8 +50,10 @@ export default function Services() {
                                     <div className="icon">
                                         <i className="flaticon-piggy-bank" />
                                     </div>
-                                    <h2 className="title"><Link href="/services-details">Finance Planning</Link></h2>
-                                    <p style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}>Morem ipsum dolor ametey consectre adipiscing.</p>
+                                    <h2 className="title"><Link href="/services-details">Training</Link></h2>
+                                    <p style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}>
+                                        Enhance your trading skills and knowledge with our expert training programs. We cover a wide range of topics to ensure you are well-prepared for the market
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -67,8 +69,10 @@ export default function Services() {
                                     <div className="icon">
                                         <i className="flaticon-calculator" />
                                     </div>
-                                    <h2 className="title"><Link href="/services-details">Tax File Audit</Link></h2>
-                                    <p style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>Morem ipsum dolor ametey consectre adipiscing.</p>
+                                    <h2 className="title"><Link href="/services-details">Trading</Link></h2>
+                                    <p style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>
+                                        We provide a robust platform for trading across various financial instruments.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -84,8 +88,10 @@ export default function Services() {
                                     <div className="icon">
                                         <i className="flaticon-money" />
                                     </div>
-                                    <h2 className="title"><Link href="/services-details">Investment Idea</Link></h2>
-                                    <p style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>Morem ipsum dolor ametey consectre adipiscing.</p>
+                                    <h2 className="title"><Link href="/services-details">Wealth Management</Link></h2>
+                                    <p style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
+                                        Secure your financial future with our comprehensive wealth management services.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -101,11 +107,55 @@ export default function Services() {
                                     <div className="icon">
                                         <i className="flaticon-layers" />
                                     </div>
-                                    <h2 className="title"><Link href="/services-details">Risk Management</Link></h2>
-                                    <p style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>Morem ipsum dolor ametey consectre adipiscing.</p>
+                                    <h2 className="title"><Link href="/services-details">Dr. Moni’s Prakash Dental</Link></h2>
+                                    <p style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
+                                        In addition to our financial services, we also operate Dr. Moni’s Prakash Dental, offering top-notch dental care services in Begusarai.
+                                    </p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className="row justify-content-center">
+                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                            <div className="services-item-two" onMouseEnter={() => handleToggle(5)} onMouseLeave={() => handleToggle(5)}>
+                                <div className="services-thumb-two">
+                                    <img src="/assets/img/services/h2_services_img01.jpg" alt="" />
+                                    <div className="item-shape">
+                                        <img src="/assets/img/services/services_item_shape.png" alt="" />
+                                    </div>
+                                </div>
+                                <div className="services-content-two">
+                                    <div className="icon">
+                                        <i className="flaticon-piggy-bank" />
+                                    </div>
+                                    <h2 className="title"><Link href="/services-details">Kotak Securities</Link></h2>
+                                    <p style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}>
+                                        Open your trading account with no initial fees.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                            <div className="services-item-two" onMouseEnter={() => handleToggle(6)} onMouseLeave={() => handleToggle(6)}>
+                                <div className="services-thumb-two">
+                                    {/* <div style={{height:330}} ></div> */}
+                                    <img src="/assets/img/services/h2_services_img02.jpg" alt="" />
+                                    <div className="item-shape">
+                                        <img src="/assets/img/services/services_item_shape.png" alt="" />
+                                    </div>
+                                </div>
+                                <div className="services-content-two">
+                                    <div className="icon">
+                                        <i className="flaticon-calculator" />
+                                    </div>
+                                    <h2 className="title"><Link href="/services-details">Tata AIA Insurance</Link></h2>
+                                    <p style={{ display: `${isActive.key == 6 ? "block" : "none"}` }}>
+                                        Protect yourself and your loved ones with our insurance offerings from Tata AIA.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>

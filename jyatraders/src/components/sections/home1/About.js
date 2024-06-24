@@ -18,18 +18,24 @@ export default function About() {
                             <div className="about-content-three">
                                 <div className="section-title-two mb-20 tg-heading-subheading animation-style3">
                                     <span className="sub-title">Get To know US</span>
-                                    <h2 className="title tg-element-title">Innovative Business Solutions for Financial Company</h2>
+                                    <h2 className="title tg-element-title">Your Partner in Financial Excellence</h2>
                                 </div>
-                                <p className="info-one">Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor sit amet, consecteture.Borem ipsum dolor sit amet, consectetur adipiscing elita florai psum.</p>
+                                <p className="info-one">
+                                    At JYA Traders, located in Begusarai, Visanpur, Bihar, we are dedicated to empowering individuals with the knowledge and tools to navigate the financial markets confidently. Whether you are a novice investor or seasoned trader, our comprehensive range of services ensures that your financial goals are met effectively.
+                                </p>
                                 <div className="about-list-two">
                                     <ul className="list-wrap">
                                         <li><i className="fas fa-arrow-right" />100% Better results</li>
-                                        <li><i className="fas fa-arrow-right" />Suspe ndisse suscipit sagittis</li>
-                                        <li><i className="fas fa-arrow-right" />promis specific timelineI guarantee</li>
-                                        <li><i className="fas fa-arrow-right" />Review Credit Reports</li>
+                                        <li><i className="fas fa-arrow-right" />Trusted Partnerships</li>
+                                        <li><i className="fas fa-arrow-right" />Training for Success</li>
+                                        <li><i className="fas fa-arrow-right" />Diverse Trading Opportunities</li>
+                                        <li><i className="fas fa-arrow-right" />Expert Wealth Management</li>
                                     </ul>
                                 </div>
-                                <p>Morem ipsum dolor sit amet, consectetur adipiscing elita florai psum dolor sit amet, consecteture.</p>
+                                <p>
+                                    Contact us today to discover how we can help you achieve your financial goals. Together, let's build a secure and prosperous future.
+
+                                </p>
                                 <div className="about-author-info">
                                     <div className="thumb">
                                         <img src="/assets/img/images/about_author.png" alt="" />

@@ -4,7 +4,7 @@ export default function Project() {
     return (
         <>
             <section className="project-area-two project-bg-two" data-background="/assets/img/bg/project_bg02.jpg">
-                <div className="container">
+                {/* <div className="container">
                     <div className="row align-items-center justify-content-center">
                         <div className="col-lg-6">
                             <div className="section-title-two mb-40 tg-heading-subheading animation-style3">
@@ -58,7 +58,7 @@ export default function Project() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
         </>
     )

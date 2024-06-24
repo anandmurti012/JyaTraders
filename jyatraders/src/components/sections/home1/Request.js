@@ -9,7 +9,7 @@ export default function Request() {
                                 <div className="section-title-two white-title mb-15 tg-heading-subheading animation-style3">
                                     <h2 className="title tg-element-title">Request a Call Back</h2>
                                 </div>
-                                <p>Ever find yourself staring at your computer screen a good consulting slogan to come to mind? Oftentimes.</p>
+                                <p>Let us help you! Fill out the form below, and our team will get back to you shortly to discuss your needs and how JYA Traders can assist in your financial journey.</p>
                             </div>
                         </div>
                         <div className="col-lg-6">

@@ -68,7 +68,7 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
             {footerStyle == 2 ? < Footer2 /> : null}
             {footerStyle == 3 ? < Footer3 /> : null}
 
-            <BackToTop />
+            {/* <BackToTop /> */}
         </>
     )
 }

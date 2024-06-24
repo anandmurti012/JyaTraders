@@ -36,19 +36,24 @@ export default function Home() {
 
       // headerStyle -->1/2/5
       <Layout headerStyle={1} footerStyle={2}>
-        <Banner />
+        <Banner /> 
         <Features />
         <About />
         <Brand />
         <Services />
         <Overview />
+       
         <Choose />
         <Project />
+        
         <Cta />
         <Team />
+
         <Testimonial />
-        <Pricing />
-        <Blog />
+
+        {/* <Pricing /> */}
+        {/* <Blog /> */}
+
         <Request />
       </Layout>
     ) : (
