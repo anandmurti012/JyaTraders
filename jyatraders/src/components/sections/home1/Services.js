@@ -98,7 +98,7 @@ export default function Services() {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                             <div className="services-item-two" onMouseEnter={() => handleToggle(4)} onMouseLeave={() => handleToggle(4)}>
                                 <div className="services-thumb-two">
-                                    <img src="/assets/img/services/h2_services_img04.jpg" alt="" />
+                                    <img src="/assets/img/services/logo-3.jpg" alt="" />
                                     <div className="item-shape">
                                         <img src="/assets/img/services/services_item_shape.png" alt="" />
                                     </div>

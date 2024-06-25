@@ -128,7 +128,7 @@
 //                                                     </div> */}
 
 //                                                     <button
-//                                                         onClick={() => { onOpen() }}
+//                                                 
 //                                                         style={{ background: '#0054FD', color: "#fff", height: 45, padding: '0px 15px', borderRadius: '100px' }}
 //                                                     >
 //                                                         Apply for Consulting
@@ -198,28 +198,7 @@ import React, { useState } from "react"
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSearch, handleSearch, isOffcanvus, handleOffcanvus }) {
 
-    const toast = useToast()
-    const router = useRouter();
 
-    const { isOpen, onOpen, onClose } = useDisclosure()
-
-    const [isLoadingButton, setIsLoadingButton] = useState(false)
-
-    const handleSubmit = () => {
-        setIsLoadingButton(true);
-        setTimeout(() => {
-            onClose();
-            setIsLoadingButton(false);
-            toast({
-                title: 'Successfully Submit',
-                description: "We've collect your request, We will contact you sortly.",
-                status: 'success',
-                duration: 4000,
-                isClosable: true,
-                position: 'top'
-            });
-        }, 2000);
-    }
 
     return (
         <>
@@ -260,23 +239,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                         <div className="row">
                             <div className="col-12">
 
-                                <button
-                                    onClick={() => { onOpen() }}
-                                    style={{
-                                        background: '#0054FD',
-                                        color: "#fff",
-                                        padding: '0px 15px',
-                                        borderRadius: '100px',
-                                        position: 'absolute',
-                                        right: 70,
-                                        top: 8,
-                                        height: 45
-                                    }}
-                                    className="applybtn"
-                                >
-                                    Apply Now
-                                </button>
-
                                 <div className="mobile-nav-toggler"
                                     style={{ marginTop: '10px' }}
                                     onClick={handleMobileMenu}>
@@ -314,10 +276,9 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                                     </div> */}
 
                                                     <button
-                                                        onClick={() => { onOpen() }}
-                                                        style={{ background: '#0054FD', color: "#fff", height: 45, padding: '0px 15px', borderRadius: '100px' }}
+                                                        style={{ background: '#0054FD', color: "#fff", height: 42, padding: '0px 25px', borderRadius: '100px' }}
                                                     >
-                                                        Apply Now
+                                                        Login
                                                     </button>
                                                 </li>
                                                 <li className="offcanvas-menu" onClick={handleOffcanvus}>
@@ -331,73 +292,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                         </div>
                                     </nav>
                                 </div>
-
-                                {/* Apply form modal */}
-                                <Modal onClose={onClose} size={'xl'} isOpen={isOpen}>
-                                    <ModalOverlay />
-                                    <ModalContent
-                                        width="90vw"
-                                    // maxWidth="none"
-                                    // height="80vh"
-                                    // sx={{ borderRadius: '12px' }} 
-                                    >
-                                        <ModalHeader>Apply Now</ModalHeader>
-                                        <ModalCloseButton />
-                                        <ModalBody>
-                                            <div class="row align-items-start">
-                                                <div class="col-12 col-sm-12 col-md-6 mt-2">
-                                                    <label>Full Name</label>
-                                                    <input className="form-control" type="text" />
-                                                </div>
-                                                <div class="col-12 col-sm-12 col-md-6 mt-2">
-                                                    <label>Email</label>
-                                                    <input className="form-control" type="email" />
-                                                </div>
-                                                <div class="col-12 col-sm-12 col-md-6 mt-2">
-                                                    <label>Mobile</label>
-                                                    <input className="form-control" type="number" />
-                                                </div>
-                                                <div class="col-12 col-sm-12 col-md-6 mt-2">
-                                                    <label>Gender</label>
-                                                    <select class="form-select" aria-label="Default select example">
-                                                        <option selected style={{ background: "#EEEEEE" }}> Select</option>
-                                                        <option value="male">Male</option>
-                                                        <option value="female">Female</option>
-                                                        <option value="other">Other</option>
-                                                    </select>
-                                                </div>
-
-                                                <div class="col-12 col-sm-12 col-md-12 mt-2">
-                                                    <label>Address</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
-                                                </div>
-                                                <div class="col-12 col-sm-12 col-md-12 mt-2">
-                                                    <label>Proffession</label>
-                                                    <input className="form-control" type="text" />
-                                                </div>
-
-                                            </div>
-                                        </ModalBody>
-                                        <ModalFooter>
-
-                                            <Button
-                                                isLoading={isLoadingButton}
-                                                style={{
-                                                    background: '#0054FD',
-                                                    color: "#fff",
-                                                    height: 40,
-                                                    // width:,
-                                                    padding: '0px 20px',
-                                                    borderRadius: '10px'
-                                                }}
-                                                onClick={() => { handleSubmit() }}
-                                                loadingText={'Submitting..'}
-                                            >
-                                                Submit
-                                            </Button>
-                                        </ModalFooter>
-                                    </ModalContent>
-                                </Modal>
 
                                 {/* Mobile Menu  */}
                                 <div className="mobile-menu">
