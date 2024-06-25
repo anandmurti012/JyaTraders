@@ -1,0 +1,11 @@
+.modalStyle {
+    width: 90vw;
+    max-width:none;
+    height:80vh
+}
+
+@media screen and (min-width:765px) {
+    .applybtn {
+        display: none;
+    }
+}

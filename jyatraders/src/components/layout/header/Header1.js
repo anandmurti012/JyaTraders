@@ -128,7 +128,7 @@
 //                                                     </div> */}
 
 //                                                     <button
-//                                                         onClick={() => { router.push('/apply'); }}
+//                                                         onClick={() => { onOpen() }}
 //                                                         style={{ background: '#0054FD', color: "#fff", height: 45, padding: '0px 15px', borderRadius: '100px' }}
 //                                                     >
 //                                                         Apply for Consulting
@@ -189,20 +189,37 @@
 import Link from "next/link"
 import MobileMenu from "../MobileMenu"
 import OffcanvusMenu from "../OffcanvusMenu"
-import { useToast } from '@chakra-ui/react'
+import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure, useToast } from '@chakra-ui/react'
 import { Router } from "next/router"
 import { useRouter } from "next/navigation"
 import './header1.module.css'
+import './styles.css'
+import React, { useState } from "react"
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSearch, handleSearch, isOffcanvus, handleOffcanvus }) {
 
     const toast = useToast()
     const router = useRouter();
 
-    const handleSubmit = async () => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
+    const [isLoadingButton, setIsLoadingButton] = useState(false)
+
+    const handleSubmit = () => {
+        setIsLoadingButton(true);
+        setTimeout(() => {
+            onClose();
+            setIsLoadingButton(false);
+            toast({
+                title: 'Successfully Submit',
+                description: "We've collect your request, We will contact you sortly.",
+                status: 'success',
+                duration: 4000,
+                isClosable: true,
+                position: 'top'
+            });
+        }, 2000);
     }
-
 
     return (
         <>
@@ -237,9 +254,29 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                             </div>
                         </div>
                     </div>
+
+
                     <div className="menu-area">
                         <div className="row">
                             <div className="col-12">
+
+                                <button
+                                    onClick={() => { onOpen() }}
+                                    style={{
+                                        background: '#0054FD',
+                                        color: "#fff",
+                                        padding: '0px 15px',
+                                        borderRadius: '100px',
+                                        position: 'absolute',
+                                        right: 70,
+                                        top: 8,
+                                        height: 45
+                                    }}
+                                    className="applybtn"
+                                >
+                                    Apply Now
+                                </button>
+
                                 <div className="mobile-nav-toggler"
                                     style={{ marginTop: '10px' }}
                                     onClick={handleMobileMenu}>
@@ -258,11 +295,11 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                         </div>
                                         <div className="navbar-wrap main-menu d-none d-lg-flex">
                                             <ul className="navigation">
-                                                <li className="active"><Link href="#">Home</Link></li>
-                                                <li className=""><Link href="#">Services</Link></li>
-                                                <li className=""><Link href="#">Courses</Link></li>
+                                                <li className="active"><Link href="#_next">Home</Link></li>
+                                                <li className=""><Link href="#services">Services</Link></li>
+                                                <li className=""><Link href="/courses">Courses</Link></li>
                                                 <li className=""><Link href="#about">About Us</Link></li>
-                                                <li><Link href="#">contacts</Link></li>
+                                                <li><Link href="#contact">contacts</Link></li>
                                             </ul>
                                         </div>
                                         <div className="header-action">
@@ -277,7 +314,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                                     </div> */}
 
                                                     <button
-                                                        onClick={() => { router.push('/apply'); }}
+                                                        onClick={() => { onOpen() }}
                                                         style={{ background: '#0054FD', color: "#fff", height: 45, padding: '0px 15px', borderRadius: '100px' }}
                                                     >
                                                         Apply Now
@@ -295,11 +332,79 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                     </nav>
                                 </div>
 
+                                {/* Apply form modal */}
+                                <Modal onClose={onClose} size={'xl'} isOpen={isOpen}>
+                                    <ModalOverlay />
+                                    <ModalContent
+                                        width="90vw"
+                                    // maxWidth="none"
+                                    // height="80vh"
+                                    // sx={{ borderRadius: '12px' }} 
+                                    >
+                                        <ModalHeader>Apply Now</ModalHeader>
+                                        <ModalCloseButton />
+                                        <ModalBody>
+                                            <div class="row align-items-start">
+                                                <div class="col-12 col-sm-12 col-md-6 mt-2">
+                                                    <label>Full Name</label>
+                                                    <input className="form-control" type="text" />
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 mt-2">
+                                                    <label>Email</label>
+                                                    <input className="form-control" type="email" />
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 mt-2">
+                                                    <label>Mobile</label>
+                                                    <input className="form-control" type="number" />
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 mt-2">
+                                                    <label>Gender</label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected style={{ background: "#EEEEEE" }}> Select</option>
+                                                        <option value="male">Male</option>
+                                                        <option value="female">Female</option>
+                                                        <option value="other">Other</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-12 col-sm-12 col-md-12 mt-2">
+                                                    <label>Address</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-12 mt-2">
+                                                    <label>Proffession</label>
+                                                    <input className="form-control" type="text" />
+                                                </div>
+
+                                            </div>
+                                        </ModalBody>
+                                        <ModalFooter>
+
+                                            <Button
+                                                isLoading={isLoadingButton}
+                                                style={{
+                                                    background: '#0054FD',
+                                                    color: "#fff",
+                                                    height: 40,
+                                                    // width:,
+                                                    padding: '0px 20px',
+                                                    borderRadius: '10px'
+                                                }}
+                                                onClick={() => { handleSubmit() }}
+                                                loadingText={'Submitting..'}
+                                            >
+                                                Submit
+                                            </Button>
+                                        </ModalFooter>
+                                    </ModalContent>
+                                </Modal>
 
                                 {/* Mobile Menu  */}
                                 <div className="mobile-menu">
                                     <nav className="menu-box">
-                                        <div className="close-btn" onClick={handleMobileMenu}><i className="fas fa-times" /></div>
+                                        <div className="close-btn" onClick={handleMobileMenu}>
+                                            <i className="fas fa-times" />
+                                        </div>
                                         <div className="nav-logo">
                                             <Link href="/">
                                                 {/* <img
@@ -319,8 +424,10 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
 
 
                                         <div className="menu-outer">
-                                            <MobileMenu  handleMobileMenu={handleMobileMenu}/>
+                                            <MobileMenu handleMobileMenu={handleMobileMenu} />
                                         </div>
+
+
                                         <div className="social-links">
                                             <ul className="clearfix list-wrap">
                                                 <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>

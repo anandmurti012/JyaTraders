@@ -13,6 +13,7 @@ import "../../public/assets/css/aos.css"
 import "../../public/assets/css/default.css"
 import "../../public/assets/css/style.css"
 import "../../public/assets/css/responsive.css"
+import { ChakraProvider } from '@chakra-ui/react'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {children}
+        <ChakraProvider>
+          {children}
+        </ChakraProvider>
       </body>
     </html>
   );

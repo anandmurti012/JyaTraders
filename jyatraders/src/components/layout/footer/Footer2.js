@@ -4,7 +4,7 @@ export default function Footer2() {
     return (
         <>
             <footer>
-                <div className="footer-area-two footer-bg-two" data-background="/assets/img/bg/h2_footer_bg.jpg">
+                <div className="footer-area-two footer-bg-two" id="about" data-background="/assets/img/bg/h2_footer_bg.jpg">
                     <div className="footer-top-two">
                         <div className="container">
                             <div className="row">

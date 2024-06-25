@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function Project() {
     return (
         <>
-            <section className="project-area-two project-bg-two" data-background="/assets/img/bg/project_bg02.jpg">
+            <section className="project-area-two project-bg-two" id='contact' data-background="/assets/img/bg/project_bg02.jpg">
                 {/* <div className="container">
                     <div className="row align-items-center justify-content-center">
                         <div className="col-lg-6">
