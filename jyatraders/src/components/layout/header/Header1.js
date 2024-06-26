@@ -260,7 +260,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                                 <li className="active"><Link href="#_next">Home</Link></li>
                                                 <li className=""><Link href="#services">Services</Link></li>
                                                 <li className=""><Link href="/courses">Courses</Link></li>
-                                                <li className=""><Link href="#about">About Us</Link></li>
+                                                <li className=""><Link href="/about">About Us</Link></li>
                                                 <li><Link href="#contact">contacts</Link></li>
                                             </ul>
                                         </div>
