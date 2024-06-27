@@ -1,7 +1,6 @@
-// components/AboutSection.js
 import React from 'react';
-import Image from 'next/image';
 import styles from './AboutSection.module.css';
+import Link from 'next/link';
 
 export default function AboutSection() {
     return (
@@ -54,9 +53,9 @@ export default function AboutSection() {
                     <div className="image-column col-12 col-lg-6 col-md-12 col-sm-12">
                         <div className={`inner-column wow fadeInLeft ${styles.innerColumn}`}>
                             <figure className={styles.image1}>
-                                <a href="#" className="lightbox-image" data-fancybox="images">
+                                <Link href={"#"} className="lightbox-image" data-fancybox="images">
                                     <img src={'/assets/img/about/1702509848175.png'} alt="" layout="responsive" width={500} height={500} />
-                                </a>
+                                </Link>
                             </figure>
                         </div>
                     </div>

@@ -17,6 +17,7 @@ import Team from "../components/sections/home1/Team"
 import Testimonial from "../components/sections/home1/Testimonial"
 import Aos from "aos"
 import { useEffect, useState } from "react"
+import AboutSection from "./about/page"
 
 
 
@@ -54,7 +55,8 @@ export default function Home() {
         {/* <Pricing /> */}
         {/* <Blog /> */}
 
-        <Request />
+        {/* <Request /> */}
+        {/* <AboutSection/> */}
       </Layout>
     ) : (
       <Preloader />

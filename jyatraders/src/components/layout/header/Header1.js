@@ -186,15 +186,12 @@
 // }
 
 
+import React from "react"
 import Link from "next/link"
 import MobileMenu from "../MobileMenu"
 import OffcanvusMenu from "../OffcanvusMenu"
-import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure, useToast } from '@chakra-ui/react'
-import { Router } from "next/router"
-import { useRouter } from "next/navigation"
 import './header1.module.css'
 import './styles.css'
-import React, { useState } from "react"
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSearch, handleSearch, isOffcanvus, handleOffcanvus }) {
 
