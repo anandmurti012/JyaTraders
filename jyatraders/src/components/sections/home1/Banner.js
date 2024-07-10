@@ -3,6 +3,8 @@ import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, 
 import Link from "next/link"
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import axios from 'axios'
+
 
 export default function Banner() {
     const toast = useToast()
@@ -14,18 +16,39 @@ export default function Banner() {
 
     const handleSubmit = () => {
         setIsLoadingButton(true);
-        setTimeout(() => {
-            onClose();
+
+        const formData={
+            name:'amit',
+            roll:456
+        }
+
+        axios.post('/api/apply', formData)
+        .then(response => {
+            console.log(response);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+
+
+        // setTimeout(() => {
+        //     onClose();
             setIsLoadingButton(false);
-            toast({
-                title: 'Successfully Submit',
-                description: "We've collect your request, We will contact you sortly.",
-                status: 'success',
-                duration: 4000,
-                isClosable: true,
-                position: 'top'
-            });
-        }, 2000);
+        //     toast({
+        //         title: 'Successfully Submit',
+        //         description: "We've collect your request, We will contact you sortly.",
+        //         status: 'success',
+        //         duration: 4000,
+        //         isClosable: true,
+        //         position: 'top'
+        //     });
+        // }, 2000);
+
+
+
+
+        
     }
 
     return (
@@ -82,7 +105,7 @@ export default function Banner() {
                             <div class="row align-items-start">
                                 <div class="col-12 col-sm-12 col-md-6 mt-2">
                                     <label>Full Name</label>
-                                    <input className="form-control" type="text" />
+                                    <input  className="form-control" type="text" />
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-6 mt-2">
                                     <label>Email</label>
