@@ -18,12 +18,12 @@ export default function OffcanvusMenu({ isOffcanvus, handleOffcanvus }) {
                     <div className="contact-list mb-30">
                         <h4>Office Address</h4>
                         <p>
-                            Begusarai, Visanpur, Bihar
+                            Chandni chowk Bishnupur Begusarai Bihar 851129
                         </p>
                     </div>
                     <div className="contact-list mb-30">
                         <h4>Phone Number</h4>
-                        <p>+0989 7876 9865 9</p>
+                        <p>+91 7856000468</p>
                     </div>
                     <div className="contact-list mb-30">
                         <h4>Email Address</h4>
@@ -39,10 +39,13 @@ export default function OffcanvusMenu({ isOffcanvus, handleOffcanvus }) {
                     <li><Link href="#"><img src="/assets/img/images/sb_insta06.jpg" alt="" /></Link></li>
                 </ul>
                 <div className="social-icon-right mt-30">
-                    <Link href="#"><i className="fab fa-facebook-f" /></Link>
-                    <Link href="#"><i className="fab fa-twitter" /></Link>
-                    <Link href="#"><i className="fab fa-google-plus-g" /></Link>
-                    <Link href="#"><i className="fab fa-instagram" /></Link>
+                    <Link href="https://www.facebook.com/share/3P9eGP8bczjuNXVW/?mibextid=qi2Omg"><i className="fab fa-facebook-f" /></Link>
+                    <Link href="https://x.com/JyaTrades?t=zfNiyRtxoWMlMelmA9_NWg&s=09"><i className="fab fa-twitter" /></Link>
+                    <Link href="https://www.instagram.com/jyatrades?igsh=M215N3F5YzM1dmtl"><i className="fab fa-instagram" /></Link>
+                    <Link href="https://pin.it/3EAsYUbZk"><i className="fab fa-pinterest-p" /></Link>
+                    <Link href="https://youtube.com/@jyatrades?si=ZSNj9KBjhwNw2zwk"><i className="fab fa-youtube" /></Link>
+                    <Link href="https://www.linkedin.com/in/jya-trades-952214317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i className="fab fa-linkedin" /></Link>
+                    <Link href="https://wa.me/917856000428"><i className="fab fa-whatsapp" /></Link>
                 </div>
             </div>
             <div className={`offcanvas-overly ${isOffcanvus ? "active" : ""}`} onClick={handleOffcanvus} />
