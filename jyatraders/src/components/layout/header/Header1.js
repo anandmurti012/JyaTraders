@@ -225,7 +225,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                         </ul>
                                     </div>
                                     <div className="header-top-btn">
-                                        <Link href="tel:0123456789"> <i className="flaticon-phone-call" />
+                                        <Link href="tel:07856000468"> <i className="flaticon-phone-call" />
                                             +91 7856000468
                                         </Link>
                                     </div>
