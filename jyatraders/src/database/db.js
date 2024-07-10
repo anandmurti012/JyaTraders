@@ -3,7 +3,7 @@ const mysql = require('mysql');
 const pool = mysql.createPool({
     connectionLimit: 10, // Adjust the limit based on your application's requirements
     host: '172.105.48.130',
-    user: 'JyaTrades856',
+    user: 'collegec_JyaTrades856',
     password: '^5Ky-ufld6Vo',
     database: 'collegec_jyatrades',
     multipleStatements: true
