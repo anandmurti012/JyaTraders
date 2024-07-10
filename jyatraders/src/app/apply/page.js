@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Apply = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,16 @@ const Apply = () => {
     e.preventDefault();
     console.log('Form data submitted:', formData);
     // Handle form submission, e.g., send to an API
+
+    axios.post('/api/apply', formData)
+    .then(response => {
+        console.log(response);
+    })
+    .catch(error => {
+        console.error(error);
+    });
   };
+
 
   return (
     <form onSubmit={handleSubmit} style={styles.form}>
