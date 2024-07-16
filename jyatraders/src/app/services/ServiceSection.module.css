@@ -1,6 +1,6 @@
 /* components/AboutSection.module.css */
 .aboutSection {
-   margin-top: 200px;
+    margin-top: 200px;
 }
 
 .container {
@@ -60,6 +60,7 @@
     color: #848484;
     font-weight: 400;
 }
+
 .text2 {
     font-size: 16px;
     line-height: 26px;
@@ -111,4 +112,10 @@
 
 .image1 {
     position: relative;
+}
+
+@media screen and (max-width:765px) {
+    .aboutSection {
+        margin-top: 80px;
+    }
 }

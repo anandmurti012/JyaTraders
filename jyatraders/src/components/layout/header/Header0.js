@@ -68,11 +68,11 @@ export default function Header0({ scroll, isMobileMenu, handleMobileMenu, isSear
                                         </div>
                                         <div className="navbar-wrap main-menu d-none d-lg-flex">
                                             <ul className="navigation">
-                                                <li className="active"><Link href="/">Home</Link></li>
+                                                <li className=""><Link href="/">Home</Link></li>
                                                 <li className=""><Link href="/services">Services</Link></li>
-                                                <li className=""><Link href="/courses">Courses</Link></li>
+                                                {/* <li className=""><Link href="/courses">Courses</Link></li> */}
                                                 <li className=""><Link href="/about">About Us</Link></li>
-                                                <li><Link href="/">contacts</Link></li>
+                                                <li><Link href="http://localhost:3000/#contact">contacts</Link></li>
                                             </ul>
                                         </div>
                                         <div className="header-action">

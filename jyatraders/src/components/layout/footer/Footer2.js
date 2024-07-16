@@ -53,10 +53,8 @@ export default function Footer2() {
                                         <h4 className="fw-title">Menu</h4>
                                         <div className="footer-link">
                                             <ul className="list-wrap">
-                                                <li><Link href="#">Company</Link></li>
-                                                <li><Link href="#">Careers</Link></li>
-                                                <li><Link href="#">Press media</Link></li>
-                                                <li><Link href="#">Our Blog</Link></li>
+                                                <li><Link href="/">Home</Link></li>
+                                                <li><Link href="/services">Services</Link></li>
                                                 <li><Link href="#">Privacy Policy</Link></li>
                                             </ul>
                                         </div>
@@ -68,7 +66,7 @@ export default function Footer2() {
                                         <div className="footer-link">
                                             <ul className="list-wrap">
                                                 <li><Link href="/about">About Us</Link></li>
-                                        
+
                                             </ul>
                                         </div>
                                     </div>

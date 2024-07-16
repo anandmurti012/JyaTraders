@@ -15,7 +15,7 @@ export default function Cta() {
                                         </div>
                                         <div className="content">
                                             <span>Call For More Info</span>
-                                            <Link href="tel:07856000468">+91 7856000468</Link>
+                                            <Link href="tel:7856000468">+91 7856000468</Link>
                                         </div>
                                     </div>
                                     <h2 className="title">Let’s Request a Schedule For Free Consultation</h2>
@@ -23,7 +23,7 @@ export default function Cta() {
                             </div>
                             <div className="col-lg-3">
                                 <div className="cta-btn text-end">
-                                    <Link href="/contact" className="btn">Contact Us</Link>
+                                    <Link href="tel:7856000468" className="btn">Call Now</Link>
                                 </div>
                             </div>
                         </div>
