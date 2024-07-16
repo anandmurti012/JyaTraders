@@ -50,8 +50,10 @@ export default function Services() {
                                     <div className="icon">
                                         <i className="flaticon-piggy-bank" />
                                     </div>
-                                    <h2 className="title">Training</h2>
-                                    <p style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}>
+                                    <Link href="/training">
+                                        <h2 className="title">Training</h2>
+                                    </Link>
+                                    <p style={{ display: `${isActive.key == 1 ? "block" : "none"}`, cursor: 'pointer' }}>
                                         Enhance your trading skills and knowledge with our expert training programs. We cover a wide range of topics to ensure you are well-prepared for the market
                                     </p>
                                 </div>
@@ -69,8 +71,10 @@ export default function Services() {
                                     <div className="icon">
                                         <i className="flaticon-calculator" />
                                     </div>
-                                    <h2 className="title">Trading</h2>
-                                    <p style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>
+                                    <Link href='/trading'>
+                                        <h2 className="title">Trading</h2>
+                                    </Link>
+                                    <p style={{ display: `${isActive.key == 2 ? "block" : "none"}`, cursor: 'pointer' }}>
                                         We provide a robust platform for trading across various financial instruments.
                                     </p>
                                 </div>
@@ -88,8 +92,10 @@ export default function Services() {
                                     <div className="icon">
                                         <i className="flaticon-money" />
                                     </div>
+                                    <Link href='/wealthManagement'>
                                     <h2 className="title">Wealth Management</h2>
-                                    <p style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
+                                    </Link>
+                                    <p style={{ display: `${isActive.key == 3 ? "block" : "none"}`,cursor:'pointer' }}>
                                         Secure your financial future with our comprehensive wealth management services.
                                     </p>
                                 </div>
@@ -107,8 +113,10 @@ export default function Services() {
                                     <div className="icon">
                                         <i className="flaticon-layers" />
                                     </div>
+                                    <Link href='/dr_moni_prakash'>
                                     <h2 className="title">Dr. Moni’s Prakash Dental</h2>
-                                    <p style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
+                                    </Link>
+                                    <p style={{ display: `${isActive.key == 4 ? "block" : "none"}`,cursor:'pointer' }}>
                                         In addition to our financial services, we also operate Dr. Moni’s Prakash Dental, offering top-notch dental care services in Begusarai.
                                     </p>
                                 </div>
@@ -131,8 +139,10 @@ export default function Services() {
                                             <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
                                         </svg>
                                     </div>
+                                    <Link href='/kotakSecurities'>
                                     <h2 className="title">Kotak Securities</h2>
-                                    <p style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}>
+                                    </Link>
+                                    <p style={{ display: `${isActive.key == 5 ? "block" : "none"}`,cursor:'pointer' }}>
                                         Open your trading account with no initial fees.
                                     </p>
                                 </div>
@@ -154,8 +164,10 @@ export default function Services() {
                                             <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                         </svg>
                                     </div>
+                                    <Link href='/tata_AIA_insurance'>
                                     <h2 className="title">Tata AIA Insurance</h2>
-                                    <p style={{ display: `${isActive.key == 6 ? "block" : "none"}` }}>
+                                    </Link>
+                                    <p style={{ display: `${isActive.key == 6 ? "block" : "none"}`,cursor:'pointer' }}>
                                         Protect yourself and your loved ones with our insurance offerings from Tata AIA.
                                     </p>
                                 </div>

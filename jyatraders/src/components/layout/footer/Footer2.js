@@ -32,7 +32,7 @@ export default function Footer2() {
                                                             <i className="flaticon-phone-call" />
                                                         </div>
                                                         <div className="content">
-                                                            <Link href="tel:0123456789">+123 888 9999</Link>
+                                                            <Link href="tel:0123456789">+91 7856000468</Link>
                                                         </div>
                                                     </li>
                                                     <li>
@@ -53,11 +53,11 @@ export default function Footer2() {
                                         <h4 className="fw-title">Menu</h4>
                                         <div className="footer-link">
                                             <ul className="list-wrap">
-                                                <li><Link href="/about">Company</Link></li>
-                                                <li><Link href="/contact">Careers</Link></li>
-                                                <li><Link href="/contact">Press media</Link></li>
-                                                <li><Link href="/blog">Our Blog</Link></li>
-                                                <li><Link href="/contact">Privacy Policy</Link></li>
+                                                <li><Link href="#">Company</Link></li>
+                                                <li><Link href="#">Careers</Link></li>
+                                                <li><Link href="#">Press media</Link></li>
+                                                <li><Link href="#">Our Blog</Link></li>
+                                                <li><Link href="#">Privacy Policy</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -67,24 +67,21 @@ export default function Footer2() {
                                         <h4 className="fw-title">Quick Links</h4>
                                         <div className="footer-link">
                                             <ul className="list-wrap">
-                                                <li><Link href="/contact">How it’s Work</Link></li>
-                                                <li><Link href="/contact">Partners</Link></li>
-                                                <li><Link href="/contact">Testimonials</Link></li>
-                                                <li><Link href="/contact">Case Studies</Link></li>
-                                                <li><Link href="/contact">Pricing</Link></li>
+                                                <li><Link href="/about">About Us</Link></li>
+                                        
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-7">
                                     <div className="footer-widget">
-                                        <h4 className="fw-title">Our Newsletter</h4>
+                                        <h4 className="fw-title">Social Media Links</h4>
                                         <div className="footer-newsletter">
-                                            <p>Sign up to Privitar’s weekly newsletter to get the latest updates.</p>
-                                            <form action="#">
+                                            {/* <p>Sign up to Privitar’s weekly newsletter to get the latest updates.</p> */}
+                                            {/* <form action="#">
                                                 <input type="email" placeholder="enter your e-mail" />
                                                 <button type="submit">Subscribe</button>
-                                            </form>
+                                            </form> */}
                                             <div className="footer-social footer-social-two">
                                                 <ul className="list-wrap">
                                                     <li><Link href="https://www.facebook.com/share/3P9eGP8bczjuNXVW/?mibextid=qi2Omg"><i className="fab fa-facebook-f" /></Link></li>
@@ -107,7 +104,7 @@ export default function Footer2() {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="copyright-text-two text-center">
-                                        <p>Copyright © gerow | All Right Reserved</p>
+                                        <p>Copyright © JyaTrades | All Right Reserved</p>
                                     </div>
                                 </div>
                             </div>
