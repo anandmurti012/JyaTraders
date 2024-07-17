@@ -5,50 +5,16 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import axios from 'axios'
 
+import ApplyForm from '../../form/ApplyForm'
 
 export default function Banner() {
-    const toast = useToast()
     const router = useRouter();
 
-    const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const [isLoadingButton, setIsLoadingButton] = useState(false)
+    const [isOpenModal, setIsOpenModal] = useState(false)
 
     const handleSubmit = () => {
-        setIsLoadingButton(true);
-
-        const formData={
-            name:'amit',
-            roll:456
-        }
-
-        axios.post('/api/apply', formData)
-        .then(response => {
-            console.log(response);
-        })
-        .catch(error => {
-            console.error(error);
-        });
-
-
-
-        // setTimeout(() => {
-        //     onClose();
-            setIsLoadingButton(false);
-        //     toast({
-        //         title: 'Successfully Submit',
-        //         description: "We've collect your request, We will contact you sortly.",
-        //         status: 'success',
-        //         duration: 4000,
-        //         isClosable: true,
-        //         position: 'top'
-        //     });
-        // }, 2000);
-
-
-
-
-        
+        setIsOpenModal(true);
     }
 
     return (
@@ -64,14 +30,7 @@ export default function Banner() {
                                     We pride ourselves on offering comprehensive trading and wealth management services tailored to meet the diverse needs of our clients.
                                 </p>
                                 <div className="banner-btn">
-                                    <button
-                                        onClick={() => { onOpen() }}
-                                        className="btn"
-                                        data-aos="fade-right"
-                                        data-aos-delay={700}>
-                                        Apply Now
-                                    </button>
-
+                                    <ApplyForm btnStyle={1} />
                                 </div>
                             </div>
                         </div>
@@ -84,78 +43,8 @@ export default function Banner() {
                                 <img src="/assets/img/banner/h2_banner_img.png" alt="" data-aos="fade-left" data-aos-delay={400} />
                             </div>
                         </div>
-
-
                     </div>
                 </div>
-
-
-                {/* Apply form modal */}
-                <Modal onClose={onClose} size={'xl'} isOpen={isOpen}>
-                    <ModalOverlay />
-                    <ModalContent
-                        width="90vw"
-                    // maxWidth="none"
-                    // height="80vh"
-                    // sx={{ borderRadius: '12px' }} 
-                    >
-                        <ModalHeader>Login</ModalHeader>
-                        <ModalCloseButton />
-                        <ModalBody>
-                            <div class="row align-items-start">
-                                <div class="col-12 col-sm-12 col-md-6 mt-2">
-                                    <label>Full Name</label>
-                                    <input  className="form-control" type="text" />
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 mt-2">
-                                    <label>Email</label>
-                                    <input className="form-control" type="email" />
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 mt-2">
-                                    <label>Mobile</label>
-                                    <input className="form-control" type="number" />
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 mt-2">
-                                    <label>Gender</label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected style={{ background: "#EEEEEE" }}> Select</option>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-12 mt-2">
-                                    <label>Address</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-12 mt-2">
-                                    <label>Proffession</label>
-                                    <input className="form-control" type="text" />
-                                </div>
-
-                            </div>
-                        </ModalBody>
-                        <ModalFooter>
-
-                            <Button
-                                isLoading={isLoadingButton}
-                                style={{
-                                    background: '#0054FD',
-                                    color: "#fff",
-                                    height: 40,
-                                    // width:,
-                                    padding: '0px 20px',
-                                    borderRadius: '10px'
-                                }}
-                                onClick={() => { handleSubmit() }}
-                                loadingText={'Submitting..'}
-                            >
-                                Submit
-                            </Button>
-                        </ModalFooter>
-                    </ModalContent>
-                </Modal>
 
                 <div className="banner-shape-wrap">
                     <img src="/assets/img/banner/h2_banner_shape01.png" alt="" />

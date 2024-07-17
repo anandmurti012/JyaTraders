@@ -42,7 +42,7 @@ export default function About() {
                                     </div>
                                     <div className="content">
                                         <h2 className="title">Mark Stranger</h2>
-                                        <span>CEO, Gerow Finance</span>
+                                        <span>CEO, Jya Trades</span>
                                     </div>
                                     <div className="signature">
                                         <img src="/assets/img/images/signature.png" alt="" />
