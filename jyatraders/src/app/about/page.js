@@ -54,7 +54,7 @@ export default function AboutSection() {
                         <div className={`inner-column wow fadeInLeft ${styles.innerColumn}`}>
                             <figure className={styles.image1}>
                                 <Link href={"#"} className="lightbox-image" data-fancybox="images">
-                                    <img src={'/assets/img/about/1702509848175.png'} alt="" layout="responsive" width={500} height={500} />
+                                    <img className={styles.shapeImage} src={'/assets/img/about/1702509848175.png'} alt="" layout="responsive" width={500} height={500} />
                                 </Link>
                             </figure>
                         </div>
@@ -62,7 +62,7 @@ export default function AboutSection() {
                 </div>
                 <div className={styles.secTitle}>
                     <span className={styles.title}>Jya Trades,</span>
-                    <h2>Your Partner in Financial Excellence</h2>
+                    <h2 style={{ color: '#00194a'}}>Your Partner in Financial Excellence</h2>
                 </div>
                 <div className={styles.text}>
                     At JYA Traders, located in Begusarai, Visanpur, Bihar, we are dedicated to empowering individuals with the knowledge and tools to navigate the financial markets confidently. Whether you are a novice investor or seasoned trader, our comprehensive range of services ensures that your financial goals are met effectively.
@@ -70,25 +70,25 @@ export default function AboutSection() {
 
                 <div>
 
-                    <b>Training for Success:</b>
+                    <b style={{ color: '#00194a'}}>Training for Success:</b>
                     <div className={styles.text}>
                         Our training programs cover everything from foundational NISM Certification to advanced strategies in Forex, Commodity, and Derivatives trading. We emphasize Zero Loss Psychology and equip you with the skills needed for Intraday, Swing, and Long-term trading.
                     </div>
 
 
-                    <b>Diverse Trading Opportunities:</b>
+                    <b style={{ color: '#00194a'}}>Diverse Trading Opportunities:</b>
                     <div className={styles.text}>
                         We offer a robust platform for trading in Cash Markets, Commodities, Forex, and more. With us, you can engage in Intraday trading for quick gains or opt for Delivery trading to build a long-term portfolio.
                     </div>
 
 
-                    <b>Expert Wealth Management:</b>
+                    <b style={{ color: '#00194a'}}>Expert Wealth Management:</b>
                     <div className={styles.text}>
                         Plan your financial future with confidence through our Retirement Planning services, Recurring and Fixed Deposits, and personalized Consultancy. We ensure your investments align with your aspirations and risk tolerance.
                     </div>
 
 
-                    <b>Trusted Partnerships:</b>
+                    <b style={{ color: '#00194a'}}>Trusted Partnerships:</b>
                     <div className={styles.text}>
                         Benefit from our collaborations with Kotak Securities for zero fee account opening and Tata AIA Insurance for reliable insurance solutions. These partnerships underscore our commitment to providing holistic financial services under one roof.
                     </div>
