@@ -33,7 +33,7 @@ export default function Services() {
                         </div>
                         <div className="col-lg-6 col-md-4">
                             <div className="view-all-btn text-end mb-30">
-                                <Link href="/services" className="btn">See All Service</Link>
+                                <Link href="/services" className="btn">View All Services</Link>
                             </div>
                         </div>
                     </div>
