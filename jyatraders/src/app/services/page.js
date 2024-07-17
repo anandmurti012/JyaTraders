@@ -56,7 +56,7 @@ export default function ServiceSection() {
                         <div className={`inner-column wow fadeInLeft ${styles.innerColumn}`}>
                             <figure className={styles.image1}>
                                 <Link href={"#"} className="lightbox-image" data-fancybox="images">
-                                    <img src={'/assets/img/services/sd_video_img.jpg'} alt="" layout="responsive" width={500} height={500} />
+                                    <img className={styles.shapeImage} src={'/assets/img/services/sd_video_img.jpg'} alt="" layout="responsive" width={500} height={500} />
                                 </Link>
                             </figure>
                         </div>
@@ -104,7 +104,7 @@ export default function ServiceSection() {
                             <div className={`inner-column wow fadeInLeft ${styles.innerColumn}`}>
                                 <figure className={styles.image1}>
                                     <Link href={"#"} className="lightbox-image" data-fancybox="images">
-                                        <img src={'/assets/img/services/services_img01.jpg'} alt="" layout="responsive" width={500} height={500} />
+                                        <img className={styles.shapeImage} src={'/assets/img/services/services_img01.jpg'} alt="" layout="responsive" width={500} height={500} />
                                     </Link>
                                 </figure>
                             </div>
@@ -188,7 +188,7 @@ export default function ServiceSection() {
                         <div className={`inner-column wow fadeInLeft ${styles.innerColumn}`}>
                             <figure className={styles.image1}>
                                 <Link href={"#"} className="lightbox-image" data-fancybox="images">
-                                    <img src={'/assets/img/services/h4_services_img02.jpg'} alt="" layout="responsive" width={500} height={500} />
+                                    <img className={styles.shapeImage} src={'/assets/img/services/h4_services_img02.jpg'} alt="" layout="responsive" width={500} height={500} />
                                 </Link>
                             </figure>
                         </div>
@@ -203,7 +203,7 @@ export default function ServiceSection() {
                             <div className={`inner-column wow fadeInLeft ${styles.innerColumn}`}>
                                 <figure className={styles.image1}>
                                     <Link href={"#"} className="lightbox-image" data-fancybox="images">
-                                        <img src={'/assets/img/services/logo-3.png'} alt="" layout="responsive" width={500} height={500} />
+                                        <img className={styles.shapeImage} src={'/assets/img/services/logo-3.png'} alt="" layout="responsive" width={500} height={500} />
                                     </Link>
                                 </figure>
                             </div>
@@ -278,7 +278,7 @@ export default function ServiceSection() {
                         <div className={`inner-column wow fadeInLeft ${styles.innerColumn}`}>
                             <figure className={styles.image1}>
                                 <Link href={"#"} className="lightbox-image" data-fancybox="images">
-                                    <img src={'/assets/img/services/services_details01.jpg'} alt="" layout="responsive" width={500} height={500} />
+                                    <img className={styles.shapeImage} src={'/assets/img/services/services_details01.jpg'} alt="" layout="responsive" width={500} height={500} />
                                 </Link>
                             </figure>
                         </div>
@@ -293,7 +293,7 @@ export default function ServiceSection() {
                             <div className={`inner-column wow fadeInLeft ${styles.innerColumn}`}>
                                 <figure className={styles.image1}>
                                     <Link href={"#"} className="lightbox-image" data-fancybox="images">
-                                        <img src={'/assets/img/services/h4_services_img01.jpg'} alt="" layout="responsive" width={500} height={500} />
+                                        <img className={styles.shapeImage} src={'/assets/img/services/h4_services_img01.jpg'} alt="" layout="responsive" width={500} height={500} />
                                     </Link>
                                 </figure>
                             </div>
@@ -330,8 +330,6 @@ export default function ServiceSection() {
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </section>
     )

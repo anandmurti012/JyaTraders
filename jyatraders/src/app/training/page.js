@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './trainingSection.module.css'
+import styles from './TrainingSection.module.css'
 import Link from 'next/link'
 
 export default function TrainingSection() {
@@ -56,7 +56,7 @@ export default function TrainingSection() {
                         <div className={`inner-column wow fadeInLeft ${styles.innerColumn}`}>
                             <figure className={styles.image1}>
                                 <Link href={"#"} className="lightbox-image" data-fancybox="images">
-                                    <img src={'/assets/img/services/sd_video_img.jpg'} alt="" layout="responsive" width={500} height={500} />
+                                    <img className={styles.shapeImage} src={'/assets/img/services/sd_video_img.jpg'} alt="" layout="responsive" width={500} height={500} />
                                 </Link>
                             </figure>
                         </div>

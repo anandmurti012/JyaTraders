@@ -9,29 +9,23 @@ export default function ContactSection() {
                 <div className="row d-flex mb-5 contact-info">
                     <div className="col-md-4">
                         <div className="row mb-5">
-                            <div className="col-md-12">
-                                <div className={`border w-100 p-4 rounded mb-2 d-flex ${styles.infoBox}`}>
+                            <div className="col-md-12">                 
                                     <div className={`icon mr-3 ${styles.icon}`}>
                                         <span className="icon-map-o"></span>
                                     </div>
-                                    <p><span>Address:</span> Chandni Chowk Bishnupur Begusarai Bihar 851129</p>
-                                </div>
+                                    <p><span>Address:</span> Chandni Chowk Bishnupur Begusarai Bihar 851129</p>                              
                             </div>
-                            <div className="col-md-12">
-                                <div className={`border w-100 p-4 rounded mb-2 d-flex ${styles.infoBox}`}>
+                            <div className="col-md-12">                        
                                     <div className={`icon mr-3 ${styles.icon}`}>
                                         <span className="icon-mobile-phone"></span>
                                     </div>
-                                    <p><span>Phone:</span> <a href="tel:07856000468">+91 7856000468</a></p>
-                                </div>
+                                    <p><span>Phone:</span> <a href="tel:07856000468">+91 7856000468</a></p>          
                             </div>
-                            <div className="col-md-12">
-                                <div className={`border w-100 p-4 rounded mb-2 d-flex ${styles.infoBox}`}>
+                            <div className="col-md-12">                          
                                     <div className={`icon mr-3 ${styles.icon}`}>
                                         <span className="icon-envelope-o"></span>
                                     </div>
                                     <p><span>Email:</span> <a href="mailto:bookings@wheelzcarrentals.com">jyatrades@gmail.com</a></p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -52,7 +46,7 @@ export default function ContactSection() {
                             </div>
 
                             <div className="form-group">
-                                <textarea name="message" cols="30" rows="7" className={`form-control ${styles.formControl}`} placeholder="Message" required></textarea>
+                                <textarea name="message" cols="30" rows="4" className={`form-control ${styles.formControl}`} placeholder="Message" required></textarea>
                             </div>
 
                             <div>

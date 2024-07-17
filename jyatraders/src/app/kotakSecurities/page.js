@@ -44,7 +44,7 @@ export default function KotakSecuritiesSection() {
                         <div className={`inner-column wow fadeInLeft ${styles.innerColumn}`}>
                             <figure className={styles.image1}>
                                 <Link href={"#"} className="lightbox-image" data-fancybox="images">
-                                    <img src={'/assets/img/services/services_details01.jpg'} alt="" layout="responsive" width={500} height={500} />
+                                    <img className={styles.shapeImage} src={'/assets/img/services/services_details01.jpg'} alt="" layout="responsive" width={500} height={500} />
                                 </Link>
                             </figure>
                         </div>
