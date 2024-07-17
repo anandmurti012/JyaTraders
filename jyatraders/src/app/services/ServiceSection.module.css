@@ -112,3 +112,7 @@
 .image1 {
     position: relative;
 }
+.shapeImage{
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+ }
