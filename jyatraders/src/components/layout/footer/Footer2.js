@@ -93,7 +93,11 @@ export default function Footer2() {
                                                     <li><Link href="https://x.com/JyaTrades?t=zfNiyRtxoWMlMelmA9_NWg&s=09"><i className="fab fa-twitter" /></Link></li>
                                                     <li><Link href="https://www.instagram.com/jyatrades?igsh=M215N3F5YzM1dmtl"><i className="fab fa-instagram" /></Link></li>
                                                     <li><Link href="https://pin.it/3EAsYUbZk"><i className="fab fa-pinterest-p" /></Link></li>
-                                                    <li><Link href="https://youtube.com/@jyatrades?si=ZSNj9KBjhwNw2zwk"><i className="fab fa-youtube" /></Link></li>
+                                                </ul>
+                                            </div><br></br>
+                                            <div className="footer-social footer-social-two">
+                                                <ul className="list-wrap">
+                                                <li><Link href="https://youtube.com/@jyatrades?si=ZSNj9KBjhwNw2zwk"><i className="fab fa-youtube" /></Link></li>
                                                     <li><Link href="https://www.linkedin.com/in/jya-trades-952214317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i className="fab fa-linkedin" /></Link></li>
                                                     <li><Link href="https://wa.me/917856000428"><i className="fab fa-whatsapp" /></Link></li>
                                                 </ul>

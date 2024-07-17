@@ -75,7 +75,7 @@ export default function BrandSlider() {
                 </div>
                 <div className="col-lg-12">
                     <div className="brand-item">
-                        <img src="/assets/img/brand/brand_img03.png" alt="" />
+                        <img src="/assets/img/brand/brand_img06.png" alt="" />
                     </div>
                 </div>
             </Slider>
