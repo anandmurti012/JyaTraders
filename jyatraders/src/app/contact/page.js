@@ -8,7 +8,7 @@ export default function ContactSection() {
             <div className="choose-shape">
                 <img src="/assets/img/images/choose_shape.png" alt="" data-aos="fade-right" data-aos-delay={0} />
             </div>
-            <div className="container">
+            <div className="container mt-5">
                 <div className="row align-items-center">
                     <div className="col-lg-5">
                         <div className="">
