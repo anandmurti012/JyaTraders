@@ -6,14 +6,8 @@ import OffcanvusMenu from "../OffcanvusMenu"
 import './header1.module.css'
 import './styles.css'
 import ApplyForm from "../../form/ApplyForm"
-import { useRouter } from "next/navigation"
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSearch, handleSearch, isOffcanvus, handleOffcanvus }) {
-
-    const route=useRouter
-    console.log(route)
-
-
 
     return (
         <>

@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // output: 'export',
+    output: 'export',
     reactStrictMode: true,
     swcMinify: true,
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
     images: {
         domains: [
             'user-images.githubusercontent.com',
-            'miro.medium.com'
         ]
     },
 

@@ -17,6 +17,7 @@
     "axios": "^1.7.2",
     "framer-motion": "^11.2.11",
     "mysql": "^2.18.1",
+    "mysql2": "^3.10.3",
     "next": "14.2.4",
     "react": "^18",
     "react-circular-progressbar": "^2.1.0",
