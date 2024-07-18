@@ -55,7 +55,7 @@ export default function Footer2() {
                                             <ul className="list-wrap">
                                                 <li><Link href="/">Home</Link></li>
                                                 <li><Link href="/about">About Us</Link></li>
-                                                <li><Link href="/courses">Courses</Link></li>
+                                                {/* <li><Link href="/courses">Courses</Link></li> */}
                                                 <li><Link href="/contact">Contacts</Link></li>
                                                 <li><Link href="/services">Services</Link></li>
                                             </ul>

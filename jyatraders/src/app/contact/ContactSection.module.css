@@ -1,6 +1,12 @@
 .contactSection {
-  padding: 60px 0;
-  background: #f8f9fa;
+  margin-top: 200px;
+  /* padding: 60px 0; */
+}
+
+@media screen and (max-width:765px) {
+  .contactSection {
+    margin-top: 100px;
+  }
 }
 
 .infoBox {
@@ -51,6 +57,7 @@
   border-color: #007bff;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
+
 /* 
 .submitButton {
   border: none;

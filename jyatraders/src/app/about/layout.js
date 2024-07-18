@@ -3,7 +3,7 @@ import Layout from '../../components/layout/Layout'
 
 const layout = ({ children }) => {
     return (
-        <Layout headerStyle={0} footerStyle={2}>
+        <Layout headerStyle={1} footerStyle={2}>
             <div>{children}</div>
         </Layout>
     )

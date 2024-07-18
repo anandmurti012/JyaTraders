@@ -5,16 +5,8 @@ import BackToTop from '../elements/BackToTop'
 import DataBg from "../elements/DataBg"
 import Breadcrumb from './Breadcrumb'
 import PageHead from './PageHead'
-import Footer1 from './footer/Footer1'
 import Footer2 from './footer/Footer2'
-import Footer3 from "./footer/Footer3"
 import Header1 from "./header/Header1"
-import Header2 from './header/Header2'
-import Header3 from "./header/Header3"
-import Header4 from "./header/Header4"
-import Header5 from "./header/Header5"
-import Header6 from "./header/Header6"
-import Header0 from "./header/Header0"
 
 export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children }) {
     const [scroll, setScroll] = useState(0)
@@ -49,14 +41,10 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
         <>
             <PageHead headTitle={headTitle} />
             <DataBg />
-            {!headerStyle && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} isOffcanvus={isOffcanvus} handleOffcanvus={handleOffcanvus} />}
-            {headerStyle == 0 ? <Header0 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} isOffcanvus={isOffcanvus} handleOffcanvus={handleOffcanvus} /> : null}
-            {headerStyle == 1 ? <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} isOffcanvus={isOffcanvus} handleOffcanvus={handleOffcanvus} /> : null}
-            {headerStyle == 2 ? <Header2 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} isOffcanvus={isOffcanvus} handleOffcanvus={handleOffcanvus} /> : null}
-            {headerStyle == 3 ? <Header3 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} isOffcanvus={isOffcanvus} handleOffcanvus={handleOffcanvus} /> : null}
-            {headerStyle == 4 ? <Header4 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} isOffcanvus={isOffcanvus} handleOffcanvus={handleOffcanvus} /> : null}
-            {headerStyle == 5 ? <Header5 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} isOffcanvus={isOffcanvus} handleOffcanvus={handleOffcanvus} /> : null}
-            {headerStyle == 6 ? <Header6 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} isOffcanvus={isOffcanvus} handleOffcanvus={handleOffcanvus} /> : null}
+
+
+            <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} isOffcanvus={isOffcanvus} handleOffcanvus={handleOffcanvus} />
+
 
             <main className="fix">
                 {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
@@ -64,10 +52,8 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
                 {children}
             </main>
 
-            {!footerStyle && < Footer1 />}
-            {footerStyle == 1 ? < Footer1 /> : null}
             {footerStyle == 2 ? < Footer2 /> : null}
-            {footerStyle == 3 ? < Footer3 /> : null}
+
 
             {/* <BackToTop /> */}
         </>

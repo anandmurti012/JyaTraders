@@ -22,7 +22,7 @@ export default function BackToTop() {
     return (
         <>
             {hasScrolled && (
-                <a className="scroll-top scroll-to-target open" href="#__next">
+                <a className="scroll-top scroll-to-target open" href="#_next">
                     <i className="fas fa-angle-up" />
                 </a>
             )}

@@ -6,8 +6,14 @@ import OffcanvusMenu from "../OffcanvusMenu"
 import './header1.module.css'
 import './styles.css'
 import ApplyForm from "../../form/ApplyForm"
+import { useRouter } from "next/navigation"
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSearch, handleSearch, isOffcanvus, handleOffcanvus }) {
+
+    const route=useRouter
+    console.log(route)
+
+
 
     return (
         <>
@@ -69,23 +75,16 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                         </div>
                                         <div className="navbar-wrap main-menu d-none d-lg-flex">
                                             <ul className="navigation">
-                                                <li className="active"><Link href="#_next">Home</Link></li>
+                                                <li className=""><Link href="/">Home</Link></li>
                                                 <li className=""><Link href="/services">Services</Link></li>
-                                                <li className=""><Link href="/courses">Courses</Link></li>
                                                 <li className=""><Link href="/about">About Us</Link></li>
-                                                <li><Link href="#contact">contacts</Link></li>
+                                                <li><Link href="/contact">contacts</Link></li>
                                             </ul>
                                         </div>
                                         <div className="header-action">
                                             <ul className="list-wrap">
                                                 <li className="header-contact-two">
-                                                    {/* <div className="icon">
-                                                        <i className="flaticon-phone-call" />
-                                                    </div>
-                                                    <div className="content">
-                                                        <span>Hot Line Number</span>
-                                                        <Link href="tel:0123456789">+123 8989 444</Link>
-                                                    </div> */}
+                                                   
                                                     
                                                     <ApplyForm btnStyle={2} />
                                                 </li>
@@ -109,11 +108,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                         </div>
                                         <div className="nav-logo">
                                             <Link href="/">
-                                                {/* <img
-                                                    src="/images/logo 500.png"
-                                                    alt=""
-                                                    style={{ borderRadius: 10 }}
-                                                /> */}
+                                              
                                                 <Link href="/">
                                                     <img
                                                         src="/images/favicon.png"
