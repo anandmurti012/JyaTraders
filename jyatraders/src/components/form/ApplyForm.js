@@ -14,6 +14,7 @@ import {
 import axios from 'axios';
 
 const ApplyForm = ({ btnStyle }) => {
+
     const toast = useToast();
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [isLoadingButton, setIsLoadingButton] = useState(false);
@@ -76,18 +77,18 @@ const ApplyForm = ({ btnStyle }) => {
 
             setIsLoadingButton(true);
 
-            await axios.post('/api/apply', data)
+            await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/apply`, data)
                 .then(response => {
                     console.log(response);
-                    setData({
-                        ...data,
-                        fullName: '',
-                        gender: '',
-                        email: '',
-                        mobile: '',
-                        address: '',
-                        profession: ''
-                    });
+                    // setData({
+                    //     ...data,
+                    //     fullName: '',
+                    //     gender: '',
+                    //     email: '',
+                    //     mobile: '',
+                    //     address: '',
+                    //     profession: ''
+                    // });
 
                     toast({
                         title: 'Successfully Submitted',
