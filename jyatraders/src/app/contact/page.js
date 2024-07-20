@@ -114,25 +114,15 @@ export default function ContactSection() {
                     <div className="col-lg-5">
                         <div className="">
                             <div className="section-title-two white-title mb-20 tg-heading-subheading animation-style3">
-                                <h5 className="title tg-element-title">
-                                    <strong style={{ color: '#5682e8', fontSize: '40px' }}>Address:</strong><br />
-                                    Chandni Chowk Bishnupur Begusarai Bihar 851129
-                                </h5>
-                                <br />
-                                <h5 className="title tg-element-title">
-                                    <strong style={{ color: '#5682e8', fontSize: '40px' }}>Phone:</strong><br />
-                                    <a href="tel:07856000468">+91 7856000468</a>
-                                </h5>
-                                <br />
-                                <h5 className="title tg-element-title">
-                                    <strong style={{ color: '#5682e8', fontSize: '40px' }}>Email:</strong><br />
-                                    <a href="mailto:bookings@wheelzcarrentals.com">jyatrades@gmail.com</a>
-                                </h5>
+
+                                <h5 style={{ fontSize: '25px' }} className="title tg-element-title"><strong style={{ color: '#5682e8', fontSize: '20px' }}>Address:</strong><br></br>Chandni Chowk Bishnupur Begusarai Bihar 851129</h5><br></br>
+                                <h5 style={{ fontSize: '25px' }} className="title tg-element-title"><strong style={{ color: '#5682e8', fontSize: '20px' }}>Phone:</strong><br></br><a href="tel:07856000468">+91 7856000468</a></h5><br></br>
+                                <h5 style={{ fontSize: '25px' }} className="title tg-element-title"><strong style={{ color: '#5682e8', fontSize: '20px' }}>Email:</strong><br></br><a href="mailto:bookings@wheelzcarrentals.com">jyatrades@gmail.com</a></h5>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-7">
-                        <div className="col-lg-12 col-md-8 block-9 mb-md-5">
+                        <div className="col-lg-12 col-md-8 block-9 mb-md-5 mt-4">
                             <div className={`bg-light p-5 contact-form ${styles.contactForm}`}>
                                 <input type="hidden" name="access_key" value="a05d4939-0a3f-4a3a-a73d-682b2e3daf29" />
 

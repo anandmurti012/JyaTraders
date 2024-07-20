@@ -81,8 +81,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                         <div className="header-action">
                                             <ul className="list-wrap">
                                                 <li className="header-contact-two">
-
-
+                                                
                                                     <ApplyForm btnStyle={2} />
                                                 </li>
                                                 <li className="offcanvas-menu" onClick={handleOffcanvus}>
