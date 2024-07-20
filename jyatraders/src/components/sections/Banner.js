@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import axios from 'axios'
 
-import ApplyForm from '../../form/ApplyForm'
+import ApplyForm from '../form/ApplyForm'
 
 export default function Banner() {
     const router = useRouter();

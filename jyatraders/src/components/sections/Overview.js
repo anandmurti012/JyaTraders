@@ -1,4 +1,4 @@
-import CounterUp from "../../../components/elements/CounterUp"
+import CounterUp from "../elements/CounterUp"
 
 export default function Overview() {
     return (

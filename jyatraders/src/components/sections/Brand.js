@@ -1,9 +1,9 @@
-import BrandSlider from "@/components/slider/BrandSlider"
+import BrandSlider from "../slider/BrandSlider"
 
 export default function Brand() {
     return (
         <>
-            <div className="brand-aera-five pt-60">
+            <div className="brand-aera-two pb-80">
                 <div className="container">
                     <BrandSlider />
                 </div>
