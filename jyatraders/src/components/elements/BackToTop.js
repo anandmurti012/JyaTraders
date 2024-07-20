@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from "react"
+import Link from 'next/link'
 
 export default function BackToTop() {
     const [hasScrolled, setHasScrolled] = useState("false")
@@ -22,9 +23,9 @@ export default function BackToTop() {
     return (
         <>
             {hasScrolled && (
-                <a className="scroll-top scroll-to-target open" href="#_next">
+                <Link className="scroll-top scroll-to-target open" href="#_next">
                     <i className="fas fa-angle-up" />
-                </a>
+                </Link>
             )}
         </>
     )

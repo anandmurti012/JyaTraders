@@ -30,8 +30,6 @@ export default function Home() {
   return (
     
     !loading ? (
-
-      // headerStyle -->1/2/5
       <Layout headerStyle={1} footerStyle={2}>
         <Banner /> 
         <Features />
@@ -39,7 +37,7 @@ export default function Home() {
         <Brand />
         <Services />
         <Overview />
-       
+      
         <Choose />
         <Project />
         
