@@ -1,21 +1,19 @@
 'use client'
 import Preloader from "../components/elements/Preloader"
 import Layout from "../components/layout/Layout"
-import About from "../components/sections/home1/About"
-import Banner from "../components/sections/home1/Banner"
-import Brand from "../components/sections/home1/Brand"
-import Choose from "../components/sections/home1/Choose"
-import Cta from "../components/sections/home1/Cta"
-import Features from "../components/sections/home1/Features"
-import Overview from "../components/sections/home1/Overview"
-import Project from "../components/sections/home1/Project"
-import Services from "../components/sections/home1/Services"
-import Team from "../components/sections/home1/Team"
-import Testimonial from "../components/sections/home1/Testimonial"
+import About from "../components/sections/About"
+import Banner from "../components/sections/Banner"
+import Brand from "../components/sections/Brand"
+import Choose from "../components/sections/Choose"
+import Cta from "../components/sections/Cta"
+import Features from "../components/sections/Features"
+import Overview from "../components/sections/Overview"
+import Project from "../components/sections/Project"
+import Services from "../components/sections/Services"
+import Team from "../components/sections/Team"
+import Testimonial from "../components/sections/Testimonial"
 import Aos from "aos"
 import { useEffect, useState } from "react"
-
-
 
 export default function Home() {
   const [loading, setLoading] = useState(true)
@@ -30,8 +28,6 @@ export default function Home() {
   return (
     
     !loading ? (
-
-      // headerStyle -->1/2/5
       <Layout headerStyle={1} footerStyle={2}>
         <Banner /> 
         <Features />
@@ -39,7 +35,7 @@ export default function Home() {
         <Brand />
         <Services />
         <Overview />
-       
+      
         <Choose />
         <Project />
         

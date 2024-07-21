@@ -67,12 +67,12 @@ export default function Footer2() {
                                         <h4 className="fw-title">Quick Links</h4>
                                         <div className="footer-link">
                                             <ul className="list-wrap">
-                                                <li><Link href="/trading">Trading</Link></li>
-                                                <li><Link href="/training">Training</Link></li>
-                                                <li><Link href="/kotakSecurities">Kotak Securities</Link></li>
-                                                <li><Link href="/tata_AIA_insurance">Tata AIA Insurance</Link></li>
-                                                <li><Link href="/wealthManagement">Wealth Management</Link></li>
-                                                <li><Link href="/dr_moni_prakash">Dr. Moni Prakash Dental</Link></li>
+                                                <li><Link href="/services/trading">Trading</Link></li>
+                                                <li><Link href="/services/training">Training</Link></li>
+                                                <li><Link href="/services/kotakSecurities">Kotak Securities</Link></li>
+                                                <li><Link href="/services/tata_AIA_insurance">Tata AIA Insurance</Link></li>
+                                                <li><Link href="/services/wealthManagement">Wealth Management</Link></li>
+                                                <li><Link href="/services/dr_moni_prakash">Dr. Moni Prakash Dental</Link></li>
                                         
                                             </ul>
                                         </div>

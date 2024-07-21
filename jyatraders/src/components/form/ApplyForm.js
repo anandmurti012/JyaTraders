@@ -79,19 +79,19 @@ const ApplyForm = ({ btnStyle }) => {
 
             await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/apply`, data)
                 .then(response => {
-                    console.log(response);
-                    // setData({
-                    //     ...data,
-                    //     fullName: '',
-                    //     gender: '',
-                    //     email: '',
-                    //     mobile: '',
-                    //     address: '',
-                    //     profession: ''
-                    // });
+                    setIsLoadingButton(false);
+                    setData({
+                        ...data,
+                        fullName: '',
+                        gender: '',
+                        email: '',
+                        mobile: '',
+                        address: '',
+                        profession: ''
+                    });
 
                     toast({
-                        title: 'Successfully Submitted',
+                        title: response.data.msg,
                         // description: "We've collected your request. We will contact you shortly.",
                         status: 'success',
                         duration: 4000,

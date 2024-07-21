@@ -6,8 +6,11 @@ import OffcanvusMenu from "../OffcanvusMenu"
 import './header1.module.css'
 import './styles.css'
 import ApplyForm from "../../form/ApplyForm"
+import { usePathname } from 'next/navigation'
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSearch, handleSearch, isOffcanvus, handleOffcanvus }) {
+
+    const pathname = usePathname()
 
     return (
         <>
@@ -69,17 +72,16 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                         </div>
                                         <div className="navbar-wrap main-menu d-none d-lg-flex">
                                             <ul className="navigation">
-                                                <li className=""><Link href="/">Home</Link></li>
-                                                <li className=""><Link href="/about">About Us</Link></li>
-                                                <li className=""><Link href="/services">Services</Link></li>
-                                                <li><Link href="/contact">Contact Us</Link></li>
+                                                <li className={pathname === '/' ? 'active' : ''}><Link href="/">Home</Link></li>
+                                                <li className={pathname === '/services' ? 'active' : ''}><Link href="/services">Services</Link></li>
+                                                <li className={pathname === '/about' ? 'active' : ''}><Link href="/about">About Us</Link></li>
+                                                <li className={pathname === '/contact' ? 'active' : ''}><Link href="/contact">contacts</Link></li>
                                             </ul>
                                         </div>
                                         <div className="header-action">
                                             <ul className="list-wrap">
                                                 <li className="header-contact-two">
-                                                   
-                                                    
+                                                
                                                     <ApplyForm btnStyle={2} />
                                                 </li>
                                                 <li className="offcanvas-menu" onClick={handleOffcanvus}>
@@ -102,14 +104,11 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                         </div>
                                         <div className="nav-logo">
                                             <Link href="/">
-                                              
-                                                <Link href="/">
-                                                    <img
-                                                        src="/images/favicon.png"
-                                                        alt=""
-                                                        style={{ height: 50, width: 50, marginTop: '-15px' }}
-                                                    />
-                                                </Link>
+                                                <img
+                                                    src="/images/favicon.png"
+                                                    alt=""
+                                                    style={{ height: 50, width: 50, marginTop: '-15px' }}
+                                                />
                                             </Link>
                                         </div>
 
