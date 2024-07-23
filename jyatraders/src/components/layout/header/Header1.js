@@ -6,6 +6,7 @@ import OffcanvusMenu from "../OffcanvusMenu"
 import './header1.module.css'
 import './styles.css'
 import ApplyForm from "../../form/ApplyForm"
+import Login from "../../form/Login"
 import { usePathname } from 'next/navigation'
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSearch, handleSearch, isOffcanvus, handleOffcanvus }) {
@@ -82,9 +83,11 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                         </div>
                                         <div className="header-action">
                                             <ul className="list-wrap">
-                                                <li className="header-contact-two">
-                                                
+                                                <li className="header-contact-two">                                                
                                                     <ApplyForm btnStyle={2} />
+                                                </li>
+                                                <li className="header-contact-two">                                                
+                                                    <Login loginButton />
                                                 </li>
                                                 <li className="offcanvas-menu" onClick={handleOffcanvus}>
                                                     <Link href="#" className="menu-tigger menu-tigger2">

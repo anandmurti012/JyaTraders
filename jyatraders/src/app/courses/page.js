@@ -19,7 +19,7 @@ const CourseSection = () => {
 
   return (
     <>
-    <div className='container'>
+    <div className='container' style={{marginTop:'130px'}}>
       <Button variant="primary" onClick={handleShow} className="mt-3">
         Toggle Sidebar
       </Button>
