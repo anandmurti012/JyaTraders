@@ -32,7 +32,7 @@ export default function Footer2() {
                                                             <i className="flaticon-phone-call" />
                                                         </div>
                                                         <div className="content">
-                                                            <Link href="tel:0123456789">+91 7856000468</Link>
+                                                            <Link href="tel:0123456789">+91 7856000428</Link>
                                                         </div>
                                                     </li>
                                                     <li>
@@ -73,7 +73,7 @@ export default function Footer2() {
                                                 <li><Link href="/services/tata_AIA_insurance">Tata AIA Insurance</Link></li>
                                                 <li><Link href="/services/wealthManagement">Wealth Management</Link></li>
                                                 <li><Link href="/services/dr_moni_prakash">Dr. Moni Prakash Dental</Link></li>
-                                        
+
                                             </ul>
                                         </div>
                                     </div>
@@ -97,8 +97,9 @@ export default function Footer2() {
                                             </div><br></br>
                                             <div className="footer-social footer-social-two">
                                                 <ul className="list-wrap">
-                                                <li><Link href="https://youtube.com/@jyatrades?si=ZSNj9KBjhwNw2zwk"><i className="fab fa-youtube" /></Link></li>
+                                                    <li><Link href="https://youtube.com/@jyatrades?si=ZSNj9KBjhwNw2zwk"><i className="fab fa-youtube" /></Link></li>
                                                     <li><Link href="https://www.linkedin.com/in/jya-trades-952214317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i className="fab fa-linkedin" /></Link></li>
+                                                    <li><Link href="https://t.me/jyatrades"><i className="fab fa-telegram" /></Link></li>
                                                     <li><Link href="https://wa.me/917856000428"><i className="fab fa-whatsapp" /></Link></li>
                                                 </ul>
                                             </div>

@@ -34,6 +34,7 @@ export default function Services() {
                         <div className="col-lg-6 col-md-4">
                             <div className="view-all-btn text-end mb-30">
                                 <Link href="/services" className="btn">View All Services</Link>
+                                {/* <Link href="/courses" className="btn">View Courses</Link> */}
                             </div>
                         </div>
                     </div>

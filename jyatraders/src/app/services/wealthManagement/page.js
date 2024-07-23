@@ -5,8 +5,7 @@ import Link from 'next/link'
 export default function ServiceSection() {
     return (
         <section className={styles.aboutSection}>
-            <div className="container">
-               
+            <div className="container">  
                 <div className="row">
                     <div className={`content-column col-lg-6 col-md-12 col-sm-12 order-2 ${styles.contentColumn}`}>
                         <div className={styles.innerColumn}>

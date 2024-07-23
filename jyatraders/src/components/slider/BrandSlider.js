@@ -48,34 +48,34 @@ export default function BrandSlider() {
     return (
         <>
             <Slider {...settings} className="row brand-active">
-                <div className="col-lg-12">
+                <div className="col-lg-11">
                     <div className="brand-item">
-                        <img src="/assets/img/brand/brand_img01.png" alt="" />
+                        <img style={{height:'80px'}} src="/assets/img/brand/brand_img01.png" alt="" />
                     </div>
                 </div>
-                <div className="col-lg-12">
+                <div className="col-lg-11">
                     <div className="brand-item">
-                        <img src="/assets/img/brand/brand_img02.png" alt="" />
+                        <img style={{height:'55px'}} src="/assets/img/brand/brand_img02.png" alt="" />
                     </div>
                 </div>
-                <div className="col-lg-12">
+                <div className="col-lg-11">
                     <div className="brand-item">
-                        <img src="/assets/img/brand/brand_img03.png" alt="" />
+                        <img style={{height:'55px'}} src="/assets/img/brand/brand_img03.png" alt="" />
                     </div>
                 </div>
-                <div className="col-lg-12">
+                <div className="col-lg-11">
                     <div className="brand-item">
-                        <img src="/assets/img/brand/brand_img04.png" alt="" />
+                        <img style={{height:'55px'}} src="/assets/img/brand/brand_img04.png" alt="" />
                     </div>
                 </div>
-                <div className="col-lg-12">
+                <div className="col-lg-11">
                     <div className="brand-item">
-                        <img src="/assets/img/brand/brand_img05.png" alt="" />
+                        <img style={{height:'55px'}} src="/assets/img/brand/brand_img05.png" alt="" />
                     </div>
                 </div>
-                <div className="col-lg-12">
+                <div className="col-lg-11">
                     <div className="brand-item">
-                        <img src="/assets/img/brand/brand_img06.png" alt="" />
+                        <img style={{height:'55px'}} src="/assets/img/brand/brand_img06.png" alt="" />
                     </div>
                 </div>
             </Slider>

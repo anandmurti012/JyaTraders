@@ -44,7 +44,7 @@ export default function ServiceSection() {
                                 <b>Patient-Centered Approach: </b>
                                 We prioritize your comfort and satisfaction with personalized dental care plans.
                             </div>
-                        </div>
+                        </div> <br></br>
                     </div>
                 </div>
             </div>

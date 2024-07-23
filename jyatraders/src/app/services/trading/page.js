@@ -53,7 +53,7 @@ export default function TradingSection() {
                                 Trade in the global currency market for high liquidity and potential profits.
                             </div>
                         </div>
-
+<br></br>
                     </div>
                 </div>
             </div>

@@ -16,9 +16,8 @@ export default function ServiceSection() {
                                     </Link>
                                 </figure>
                             </div>
-
                         </div>
-                    </div>
+                    </div> 
                     <div className="image-column col-12 col-lg-6 col-md-12 col-sm-12">
                         <div className={styles.secTitle}>
                             <span className={styles.title}>Tata AIA Insurance</span>
@@ -45,7 +44,7 @@ export default function ServiceSection() {
                             <div className={styles.text}>
                                 <b>Trusted Partner: </b>
                                 Backed by Tata AIA, a renowned name in the insurance industry, ensuring reliability and trust.
-                            </div>
+                            </div><br></br>
                         </div>
                     </div>
                 </div>

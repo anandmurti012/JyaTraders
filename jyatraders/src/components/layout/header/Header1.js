@@ -22,7 +22,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                 <div className="header-top-left">
                                     <ul className="list-wrap">
                                         <li><i className="flaticon-location" />Begusarai, Visanpur, Bihar</li>
-                                        <li><i className="flaticon-mail" /><Link href="#">jyatrades@gmail.com</Link></li>
+                                        <li><i className="flaticon-mail" /><Link href="mailto:jyatrades@gmail.com">jyatrades@gmail.com</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -36,12 +36,13 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                             <li><Link href="https://pin.it/3EAsYUbZk"><i className="fab fa-pinterest-p" /></Link></li>
                                             <li><Link href="https://youtube.com/@jyatrades?si=ZSNj9KBjhwNw2zwk"><i className="fab fa-youtube" /></Link></li>
                                             <li><Link href="https://www.linkedin.com/in/jya-trades-952214317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i className="fab fa-linkedin" /></Link></li>
+                                            <li><Link href="https://t.me/jyatrades"><i className="fab fa-telegram" /></Link></li>
                                             <li><Link href="https://wa.me/917856000428"><i className="fab fa-whatsapp" /></Link></li>
                                         </ul>
                                     </div>
                                     <div className="header-top-btn">
-                                        <Link href="tel:07856000468"> <i className="flaticon-phone-call" />
-                                            +91 7856000468
+                                        <Link href="tel:07856000428"> <i className="flaticon-phone-call" />
+                                            +91 7856000428
                                         </Link>
                                     </div>
                                 </div>
@@ -73,9 +74,10 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                         <div className="navbar-wrap main-menu d-none d-lg-flex">
                                             <ul className="navigation">
                                                 <li className={pathname === '/' ? 'active' : ''}><Link href="/">Home</Link></li>
-                                                <li className={pathname === '/services' ? 'active' : ''}><Link href="/services">Services</Link></li>
                                                 <li className={pathname === '/about' ? 'active' : ''}><Link href="/about">About Us</Link></li>
-                                                <li className={pathname === '/contact' ? 'active' : ''}><Link href="/contact">contacts</Link></li>
+                                                <li className={pathname === '/services' ? 'active' : ''}><Link href="/services">Services</Link></li>
+                                                <li className={pathname === '/courses' ? 'active' : ''}><Link href="/courses">Courses</Link></li>
+                                                <li className={pathname === '/contact' ? 'active' : ''}><Link href="/contact">Contact Us</Link></li>
                                             </ul>
                                         </div>
                                         <div className="header-action">
@@ -126,6 +128,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                                 <li><Link href="https://pin.it/3EAsYUbZk"><i className="fab fa-pinterest-p" /></Link></li>
                                                 <li><Link href="https://youtube.com/@jyatrades?si=ZSNj9KBjhwNw2zwk"><i className="fab fa-youtube" /></Link></li>
                                                 <li><Link href="https://www.linkedin.com/in/jya-trades-952214317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i className="fab fa-linkedin" /></Link></li>
+                                                <li><Link href="https://t.me/jyatrades"><i className="fab fa-telegram" /></Link></li>
                                                 <li><Link href="https://wa.me/917856000428"><i className="fab fa-whatsapp" /></Link></li>
                                             </ul>
                                         </div>

@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import styles from './ContactSection.module.css';
+import Cta from '../../components/sections/Cta';
 import {
     Button,
     useDisclosure,
@@ -113,43 +114,46 @@ export default function ContactSection() {
                 <div className="row align-items-center">
                     <div className="col-lg-5">
                         <div className="">
-                            <div className="section-title-two white-title mb-20 tg-heading-subheading animation-style3">
-                                <h5 style={{fontSize:'25px'}} className="title tg-element-title"><strong style={{color:'#5682e8', fontSize:'20px'}}>Address:</strong><br></br>Chandni Chowk Bishnupur Begusarai Bihar 851129</h5><br></br>
-                                <h5 style={{fontSize:'25px'}} className="title tg-element-title"><strong style={{color:'#5682e8', fontSize:'20px'}}>Phone:</strong><br></br><a href="tel:07856000468">+91 7856000468</a></h5><br></br>
-                                <h5 style={{fontSize:'25px'}} className="title tg-element-title"><strong style={{color:'#5682e8', fontSize:'20px'}}>Email:</strong><br></br><a href="mailto:bookings@wheelzcarrentals.com">jyatrades@gmail.com</a></h5>
+                            <div className="white-title mb-20 tg-heading-subheading animation-style3">
+                                <p style={{ fontSize: '20px', color:'white' }} className="title tg-element-title"><strong style={{ color: '#5682e8', fontSize: '25px' }}>Address:</strong><br></br>Chandni Chowk Bishnupur Begusarai Bihar 851129</p>
+                                <p style={{ fontSize: '20px',color:'white' }} className="title tg-element-title"><strong style={{ color: '#5682e8', fontSize: '25px' }}>Phone:</strong><br></br><a href="tel:07856000428">+91 7856000428</a></p>
+                                <p style={{ fontSize: '20px',color:'white' }} className="title tg-element-title"><strong style={{ color: '#5682e8', fontSize: '25px' }}>Email:</strong><br></br><a href="mailto:jyatrades@gmail.com">jyatrades@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-7">
                         {/* <div className="skill-wrap wow fadeInRight" data-wow-delay=".2s">                      */}
-                            <div className=" col-lg-12 col-md-8 block-9 mb-md-5">
-                                <form className={`bg-light p-5 contact-form ${styles.contactForm}`} action="https://api.web3forms.com/submit" method="POST">
-                                    <input type="hidden" name="access_key" value="a05d4939-0a3f-4a3a-a73d-682b2e3daf29" />
+                        <div className=" col-lg-12 col-md-8 block-9 mb-md-5">
+                            <form className={`bg-light p-5 contact-form ${styles.contactForm}`} action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="a05d4939-0a3f-4a3a-a73d-682b2e3daf29" />
 
-                                    <div className="form-group">
-                                        <input name="name" type="text" className={`form-control ${styles.formControl}`} placeholder="Your Name" required />
-                                    </div>
+                                <div className="form-group">
+                                    <input name="name" type="text" className={`form-control ${styles.formControl}`} placeholder="Your Name" required />
+                                </div>
 
-                                    <div className="form-group">
-                                        <input name="phone" type="number" className={`form-control ${styles.formControl}`} placeholder="Your Contact" required />
-                                    </div>
+                                <div className="form-group">
+                                    <input name="phone" type="number" className={`form-control ${styles.formControl}`} placeholder="Your Contact" required />
+                                </div>
 
-                                    <div className="form-group">
-                                        <input name="email" type="email" className={`form-control ${styles.formControl}`} placeholder="Your Email" required />
-                                    </div>
+                                <div className="form-group">
+                                    <input name="email" type="email" className={`form-control ${styles.formControl}`} placeholder="Your Email" required />
+                                </div>
 
-                                    <div className="form-group">
-                                        <textarea name="message" cols="30" rows="4" className={`form-control ${styles.formControl}`} placeholder="Message" required></textarea>
-                                    </div>
+                                <div className="form-group">
+                                    <textarea name="message" cols="30" rows="4" className={`form-control ${styles.formControl}`} placeholder="Message" required></textarea>
+                                </div>
 
-                                    <div>
-                                        <button className={`btn btn-primary ${styles.submitButton}`} type="submit">Submit Form</button>
-                                    </div>
-                                </form>
-                            </div>
+                                <div>
+                                    <button className={`btn btn-primary ${styles.submitButton}`} type="submit">Submit Form</button>
+                                </div>
+                            </form>
+                        </div>
                         {/* </div> */}
                     </div>
                 </div>
+            </div>
+            <div style={{marginTop:"150px"}}>
+             <Cta />
             </div>
         </section>
     );

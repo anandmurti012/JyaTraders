@@ -1,6 +1,6 @@
 /* components/AboutSection.module.css */
 .aboutSection {
-   margin-top: 200px;
+   margin-top: 150px;
  }
  
  .container {
@@ -114,7 +114,7 @@
  
  .image1 {
     position: relative;
- 
+ align-items: center;
  }
  .shapeImage{
     border-top-right-radius: 20px;

@@ -1,0 +1,41 @@
+/* CourseSection.module.css */
+.tabContent {
+  display: none;
+}
+
+.tabContentActive {
+  display: block;
+}
+
+.sidebarList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebarButton {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #007bff;
+  text-align: left;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebarButton:hover {
+  background-color: #e9ecef;
+  color: #0056b3;
+}
+
+.content {
+  margin-top: 1rem;
+}
+
+.courseFont {
+  font-size: 20px;
+  color: green;
+}

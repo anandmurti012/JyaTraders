@@ -23,11 +23,11 @@ export default function OffcanvusMenu({ isOffcanvus, handleOffcanvus }) {
                     </div>
                     <div className="contact-list mb-30">
                         <h4>Phone Number</h4>
-                        <p>+91 7856000468</p>
+                        <Link href="tel:0123456789">+91 7856000428</Link>
                     </div>
                     <div className="contact-list mb-30">
                         <h4>Email Address</h4>
-                        <Link href='#' >jyatrades@gmail.com</Link>
+                        <Link href="mailto:jyatrades@gmail.com" >jyatrades@gmail.com</Link>
                     </div>
                 </div>
                 <ul className="side-instagram list-wrap">
@@ -45,6 +45,7 @@ export default function OffcanvusMenu({ isOffcanvus, handleOffcanvus }) {
                     <Link href="https://pin.it/3EAsYUbZk"><i className="fab fa-pinterest-p" /></Link>
                     <Link href="https://youtube.com/@jyatrades?si=ZSNj9KBjhwNw2zwk"><i className="fab fa-youtube" /></Link>
                     <Link href="https://www.linkedin.com/in/jya-trades-952214317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i className="fab fa-linkedin" /></Link>
+                    <Link href="https://t.me/jyatrades"><i className="fab fa-telegram" /></Link>
                     <Link href="https://wa.me/917856000428"><i className="fab fa-whatsapp" /></Link>
                 </div>
             </div>
