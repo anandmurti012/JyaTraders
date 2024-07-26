@@ -1,5 +1,6 @@
+
 export default function Dashboard() {
     return (
-            <h2>dfg</h2>
+            <h2>add</h2>
     )
 }

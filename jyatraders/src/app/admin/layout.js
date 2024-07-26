@@ -1,12 +1,8 @@
-import React from 'react'
-import Layout from '../../components/layout/Layout'
 
-const layout = ({ children }) => {
+import AdminMainLayout from '../../components/adminLayout/AdminMainLayout'
+
+export default function Layout() {
     return (
-        <Layout headerStyle={1} footerStyle={2}>
-            <div>{children}</div>
-        </Layout>
+        <AdminMainLayout />
     )
 }
-
-export default layout

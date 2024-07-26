@@ -5,7 +5,7 @@ export const middleware = (request: NextRequest) => {
 
     const isPublicPath = path === '/' || path === '/apply' || path === '/services' || path === '/about';
 
-    const token = request.cookies.get('token');
+    const token = "request.cookies.get('token')";
     const role = "admin"; // assuming the role is stored in cookies
 
     if (isPublicPath && token) {
