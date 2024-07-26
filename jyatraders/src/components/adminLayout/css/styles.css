@@ -18,6 +18,7 @@
 }
 
 #leftSide {
+    background-color: #fff;
     display: block;
     width: 16%;
     overflow-y: auto;

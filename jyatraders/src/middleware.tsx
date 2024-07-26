@@ -26,7 +26,7 @@ export const middleware = (request: NextRequest) => {
             return NextResponse.redirect(new URL('/user', request.nextUrl));
         } else if (path.startsWith('/user') && role !== 'user') {
             return NextResponse.redirect(new URL('/admin', request.nextUrl));
-        }
+        }       
     }
 
     return NextResponse.next();

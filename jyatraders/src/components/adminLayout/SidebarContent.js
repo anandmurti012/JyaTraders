@@ -3,11 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { Box, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon } from '@chakra-ui/react';
 import './css/sidebarcontent.css'
 import { LuLayoutDashboard } from "react-icons/lu";
-import { CiPlay1 } from "react-icons/ci";
 import { BiPurchaseTagAlt } from "react-icons/bi";
 import { TbUsersGroup } from "react-icons/tb";
 import Link from "next/link"
 import Image from 'next/image'
+import { MdOutlineClass } from "react-icons/md";
+import { RiFileAddLine } from "react-icons/ri";
 
 
 
@@ -93,7 +94,7 @@ const SidebarContent = ({ onCloseDrawer }) => {
                     <span style={{ fontWeight: '500' }} > Dashboard </span>
                 </Link>
 
-                <Accordion allowToggle  >
+                {/* <Accordion allowToggle  >
                     <AccordionItem
                         border="none"
 
@@ -113,19 +114,28 @@ const SidebarContent = ({ onCloseDrawer }) => {
                             <AccordionIcon />
                         </AccordionButton>
 
-                        <Link onClick={() => { setActive(0); hideDrawer() }} href={'/admin/courses/add'} style={{ textDecoration: 'none' }} >
+                        <Link onClick={() => { setActive(0); hideDrawer() }} href={''} style={{ textDecoration: 'none' }} >
                             <AccordionPanel style={styles.subOption}>
                                 Add Courses
                             </AccordionPanel>
                         </Link>
 
-                        <Link onClick={() => { setActive(0); hideDrawer() }} href={'/admin/courses/view'} style={{ textDecoration: 'none' }}>
+                        <Link onClick={() => { setActive(0); hideDrawer() }} href={''} style={{ textDecoration: 'none' }}>
                             <AccordionPanel style={styles.subOption}>
                                 View Courses
                             </AccordionPanel>
                         </Link>
                     </AccordionItem>
-                </Accordion>
+                </Accordion> */}
+
+                <Link onClick={() => { setActive(2); hideDrawer() }} href="/admin/courses/add" style={active === 2 ? styles.activeSingleOption : styles.singleOption}>
+                    <RiFileAddLine />
+                    <span style={{ fontWeight: '500' }} > Add Courses </span>
+                </Link>
+                <Link onClick={() => { setActive(3); hideDrawer() }} href="/admin/courses/view" style={active === 3 ? styles.activeSingleOption : styles.singleOption}>
+                    <MdOutlineClass />
+                    <span style={{ fontWeight: '500' }} > View Courses </span>
+                </Link>
 
                 <Link onClick={() => { setActive(4); hideDrawer() }} href="/admin/subscription" style={active === 4 ? styles.activeSingleOption : styles.singleOption}>
                     <BiPurchaseTagAlt />
