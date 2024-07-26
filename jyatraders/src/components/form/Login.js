@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   Modal,
   Button,
@@ -13,7 +13,7 @@ import {
   FormControl,
   FormLabel, Input
 } from '@chakra-ui/react'
- 
+
 function Login() {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -23,13 +23,13 @@ function Login() {
   return (
     <>
       <Button onClick={onOpen} style={{
-                            background: '#0054FD',
-                            color: "#fff",
-                            height: 42,
-                            padding: '0px 25px',
-                            borderRadius: '100px',
-                            paddingBottom: '2px'
-                        }}>Login</Button>
+        background: '#0054FD',
+        color: "#fff",
+        height: 42,
+        padding: '0px 25px',
+        borderRadius: '100px',
+        paddingBottom: '2px'
+      }}>Login</Button>
 
       <Modal
         initialFocusRef={initialRef}
@@ -63,6 +63,6 @@ function Login() {
       </Modal>
     </>
   )
-} 
+}
 
 export default Login;
