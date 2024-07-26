@@ -151,16 +151,23 @@ export default function AddCourses() {
                         />
                     </div>
                 </div>
-
+                <div className='col-12 mt-2 col-sm-6 col-md-4'>
+                    <div className='form-group'>
+                        <label className='label'>Course Link <span style={{ color: 'red' }}>*</span></label>
+                        <input
+                            className='form-control'
+                            placeholder={'Link'}
+                            name='title'
+                            value={data.title}
+                            onChange={inputData}
+                        />
+                    </div>
+                </div>
             </div>
 
 
-
-
             <div className='form-footer mt-3'>
-                <div>
-
-                </div>
+                <div> </div>
 
                 <div style={{ display: 'flex', gap: 8 }}>
                     <div>
