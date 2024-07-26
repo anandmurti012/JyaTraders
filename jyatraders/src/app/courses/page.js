@@ -1,6 +1,7 @@
  "use client"
 import React, { useState, useEffect } from 'react';
 import styles from './CoursesSection.module.css';
+import { Link } from '@chakra-ui/react';
 
 const CoursesSection = () => {
   const [courses, setCourses] = useState([]);
@@ -27,12 +28,14 @@ const CoursesSection = () => {
                 <div className={styles.cardImageContainer}>
                   <img src={course.image} className={`card-img-top ${styles.cardImage}`} alt={course.title} />
                 </div>
+                 <Link href='/courses/lecture'>
                 <div className={`card-body ${styles.cardBody}`}>
                   <h5 className={`card-title ${styles.cardTitle}`}>{course.title}</h5>
                   <p className={`card-text ${styles.cardText}`}>{course.description}</p>
                   <p className={`card-text ${styles.cardPrice}`}><strong>Price: {course.price}</strong></p>
                   <button className={`btn ${styles.enrollButton}`}>Enroll Now</button>
                 </div>
+                 </Link>
               </div>
             </div>
           ))}
