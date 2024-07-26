@@ -1,21 +1,7 @@
 'use client'
-import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure, useToast } from "@chakra-ui/react";
-import Link from "next/link"
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import axios from 'axios'
-
 import ApplyForm from '../form/ApplyForm'
 
 export default function Banner() {
-    const router = useRouter();
-
-
-    const [isOpenModal, setIsOpenModal] = useState(false)
-
-    const handleSubmit = () => {
-        setIsOpenModal(true);
-    }
 
     return (
         <>
@@ -34,6 +20,7 @@ export default function Banner() {
                                 </div>
                             </div>
                         </div>
+
                         <div className="col-lg-6">
                             <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '-30px' }}>
                                 {/* <button className="btn btn-primary" style={{ marginTop: '0' }}>Signup</button>
