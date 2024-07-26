@@ -1,4 +1,4 @@
- "use client"
+"use client"
 import React, { useState, useEffect } from 'react';
 import styles from './CoursesSection.module.css';
 import { Link } from '@chakra-ui/react';
@@ -24,19 +24,21 @@ const CoursesSection = () => {
         <div className="row">
           {courses.map(course => (
             <div key={course.id} className="col-md-4 mb-4">
-              <div className={`card ${styles.courseCard}`}>
-                <div className={styles.cardImageContainer}>
-                  <img src={course.image} className={`card-img-top ${styles.cardImage}`} alt={course.title} />
+              <Link className='textDecor' href='/courses/lecture'>
+                <div className={`card ${styles.courseCard}`}>
+                  <div className={styles.cardImageContainer}>
+                    <img src={course.image} className={`card-img-top ${styles.cardImage}`} alt={course.title} />
+                  </div>
+
+                  <div className={`card-body ${styles.cardBody}`}>
+                    <h5 className={`card-title ${styles.cardTitle}`}>{course.title}</h5>
+                    <p className={`card-text ${styles.cardText}`}>{course.description}</p>
+                    <p className={`card-text ${styles.cardPrice}`}><strong>Price: {course.price}</strong></p>
+                    <button className={`btn ${styles.enrollButton}`}>Enroll Now</button>
+                  </div>
                 </div>
-                 <Link href='/courses/lecture'>
-                <div className={`card-body ${styles.cardBody}`}>
-                  <h5 className={`card-title ${styles.cardTitle}`}>{course.title}</h5>
-                  <p className={`card-text ${styles.cardText}`}>{course.description}</p>
-                  <p className={`card-text ${styles.cardPrice}`}><strong>Price: {course.price}</strong></p>
-                  <button className={`btn ${styles.enrollButton}`}>Enroll Now</button>
-                </div>
-                 </Link>
-              </div>
+              </Link>
+
             </div>
           ))}
         </div>
