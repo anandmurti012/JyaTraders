@@ -1,122 +1,133 @@
 /* components/AboutSection.module.css */
 .aboutSection {
-   margin-top: 150px;
- }
- 
- .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
- }
- 
- .row {
-    display: flex;
-    flex-wrap: wrap;
- }
- 
- .contentColumn {
-    padding-left: 30px;
-    margin-bottom: 50px;
- }
- 
- .innerColumn {
-    position: relative;
- }
- 
- .secTitle {
-    /* margin-bottom: 60px; */
- }
- 
- .title {
-    font-size: 22px;
-    line-height: 24px;
-    color: #00194a;
-    font-weight: bold;
-    margin-bottom: 15px;
- }
- 
- .secTitle h2 {
-    font-size: 40px;
-    line-height: 1.28em;
-    color: #222;
-    font-weight: 600;
-    padding-bottom: 18px;
-    position: relative;
- }
- 
- .secTitle h2:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 50px;
-    height: 3px;
-    background-color: #d1d2d6;
- }
- 
- .text {
-    font-size: 16px;
-    line-height: 26px;
-    color: #03246d;
-    font-weight: 400;
- }
- .text b{
-    color: #022980;
- }
- .text2 {
-    font-size: 16px;
-    line-height: 26px;
-    color: #022980;
-    font-weight: 400;
-    margin-bottom: 20px;
- }
- 
- 
- .btnBox {
-    margin-top: 20px;
- }
- 
- .imageColumn {
-    position: relative;
- }
- 
- .innerColumn {
-    position: relative;
- }
- 
- .authorDesc {
-    position: absolute;
-    bottom: 16px;
-    background: orange;
-    padding: 10px 15px;
-    left: 96px;
-    width: calc(100% - 152px);
-    border-radius: 50px;
-    z-index: 1;
- }
- 
- .authorDesc h2 {
-    font-size: 21px;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #fff;
-    margin: 0;
- }
- 
- .authorDesc span {
-    font-size: 16px;
-    letter-spacing: 6px;
-    text-align: center;
-    color: #fff;
-    display: block;
-    font-weight: 400;
- }
- 
- .image1 {
-    position: relative;
- 
- }
- .shapeImage{
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
- }
+   margin-top: 180px;
+}
+
+@media screen and (max-width:765px) {
+   .aboutSection {
+      margin-top: 80px;
+   }
+
+}
+
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.contentColumn {
+   padding-left: 30px;
+   margin-bottom: 50px;
+}
+
+.innerColumn {
+   position: relative;
+}
+
+.secTitle {
+   /* margin-bottom: 60px; */
+}
+
+.title {
+   font-size: 22px;
+   line-height: 24px;
+   color: #00194a;
+   font-weight: bold;
+   margin-bottom: 15px;
+}
+
+.secTitle h2 {
+   font-size: 40px;
+   line-height: 1.28em;
+   color: #222;
+   font-weight: 600;
+   padding-bottom: 18px;
+   position: relative;
+}
+
+.secTitle h2:before {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 50px;
+   height: 3px;
+   background-color: #d1d2d6;
+}
+
+.text {
+   font-size: 16px;
+   line-height: 26px;
+   color: #03246d;
+   font-weight: 400;
+}
+
+.text b {
+   color: #022980;
+}
+
+.text2 {
+   font-size: 16px;
+   line-height: 26px;
+   color: #022980;
+   font-weight: 400;
+   margin-bottom: 20px;
+}
+
+
+.btnBox {
+   margin-top: 20px;
+}
+
+.imageColumn {
+   position: relative;
+}
+
+.innerColumn {
+   position: relative;
+}
+
+.authorDesc {
+   position: absolute;
+   bottom: 16px;
+   background: orange;
+   padding: 10px 15px;
+   left: 96px;
+   width: calc(100% - 152px);
+   border-radius: 50px;
+   z-index: 1;
+}
+
+.authorDesc h2 {
+   font-size: 21px;
+   letter-spacing: 1px;
+   text-align: center;
+   color: #fff;
+   margin: 0;
+}
+
+.authorDesc span {
+   font-size: 16px;
+   letter-spacing: 6px;
+   text-align: center;
+   color: #fff;
+   display: block;
+   font-weight: 400;
+}
+
+.image1 {
+   position: relative;
+
+}
+
+.shapeImage {
+   border-top-right-radius: 20px;
+   border-bottom-left-radius: 20px;
+}

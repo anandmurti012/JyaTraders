@@ -1,6 +1,12 @@
 /* components/AboutSection.module.css */
 .aboutSection {
-  margin-top: 150px;
+  margin-top: 180px;
+}
+@media screen and (max-width:765px) {
+   .aboutSection {
+      margin-top: 80px;
+   }
+   
 }
 
 .container {
