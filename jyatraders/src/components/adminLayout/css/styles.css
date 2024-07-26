@@ -5,7 +5,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 10px;
+    padding: 5px 10px 0px 10px;
+    align-items: center;
 }
 
 .mainDashBody {
@@ -37,18 +38,26 @@
     display: none;
 }
 
-.mobile-menu {
+/* .mobile-menu {
+    display: none;
+} */
+
+.mobile-none {
+    border: solid 1px #f0f0f0;
+    border-radius: 5px;
+    padding: 2px 4px 1px 4px;
+    color: black;
+}
+
+.mobilemenu{
     display: none;
 }
 
-.mobile-none {
-    background-color: rgb(242, 242, 242);
-    padding: 6px 10px 2.5px 10px;
-    border-radius: 10px;
-}
-
-
 @media (max-width: 765px) {
+    .mobilemenu{
+        display: block;
+    }
+
     #leftSide {
         display: none;
     }
@@ -57,9 +66,7 @@
         display: none;
     }
 
-    .mobile-menu {
-        display: block;
-    }
+
 
     #rightSide {
         width: 100%;

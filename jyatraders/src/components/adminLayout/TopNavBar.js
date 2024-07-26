@@ -9,6 +9,9 @@ import {
 } from '@chakra-ui/react'
 import MobileMenu from './MobileMenu';
 import Link from "next/link"
+import { MdFormatAlignLeft } from "react-icons/md";
+import Image from 'next/image'
+
 
 export default function TopNavBar() {
     const admin ={}
@@ -38,6 +41,8 @@ export default function TopNavBar() {
 
     useEffect(() => {
         const handleResize = () => {
+
+            console.log(window.innerWidth)
             if (window.innerWidth < 765) {
                 setisExpand(false)
                 document.getElementById('leftSide').style.display = 'none';
@@ -65,20 +70,15 @@ export default function TopNavBar() {
 
 
     return (
-        <div className='nav-bar'>
+        <div className='nav-bar' >
 
             <div>
-                <div className='mobile-menu'>
+                <div className='mobilemenu'>
                     <MobileMenu />
                 </div>
 
                 <button className='mobile-none' onClick={() => { toggleSideButton() }}  >
-                    {
-                        isExpand ?
-                            <i class="fa-solid fa-angles-left" style={{ color: '#196ECF', fontSize: '20px' }} ></i>
-                            :
-                            <i class="fa-solid fa-angles-right" style={{ color: '#196ECF', fontSize: '20px' }} ></i>
-                    }
+                   <MdFormatAlignLeft style={{fontSize:'24px'}} />
                 </button>
             </div>
 
@@ -86,21 +86,19 @@ export default function TopNavBar() {
 
                 <Menu>
                     <MenuButton >
-                        <Link href="">
-                            {/* <img
+                        <Link href="/admin">
+                            <Image
                                 name='A D'
-                                src={`${process.env.REACT_APP_APIURL}/uploads/admins/${admin.image}`}
-                                style={{ height: 35, width: 35, borderRadius: 100 }}
-                                onError={(e) => {
-                                    e.target.src = "https://cdn-icons-png.flaticon.com/128/149/149071.png"; // Replace with a placeholder image path
-                                    e.target.onerror = null; // Prevent infinite loop in case placeholder image also fails to load
-                                }}
-                            /> */}
+                                src={`https://cdn-icons-png.flaticon.com/128/149/149071.png`}
+                                height={38}
+                                width={38}
+                                style={{ borderRadius: 100 }}
+                            />
                         </Link>
                     </MenuButton>
 
                     <MenuList>
-                        <MenuItem>Profile</MenuItem>
+                        {/* <MenuItem>Profile</MenuItem> */}
                         <MenuItem onClick={Logout} >Logout</MenuItem>
                     </MenuList>
                 </Menu>

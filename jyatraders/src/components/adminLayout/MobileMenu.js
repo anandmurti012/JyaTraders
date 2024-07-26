@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import {
     Drawer,
@@ -10,6 +11,8 @@ import {
 } from '@chakra-ui/react'
 import Link from "next/link"
 import SidebarContent from './SidebarContent'
+import { VscThreeBars } from "react-icons/vsc";
+import Image from 'next/image'
 
 export default function MobileMenu() {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -18,9 +21,9 @@ export default function MobileMenu() {
     return (
         <>
             <div className='ml-2' >
-                <Link href=''
+                <Link href=""
                     colorScheme='teal' onClick={onOpen}>
-                    <i class="fa-solid fa-bars" style={{ fontSize: "25px" }}></i>
+                    <VscThreeBars fontSize={25} />
                 </Link>
             </div>
             <Drawer
@@ -36,10 +39,10 @@ export default function MobileMenu() {
                     sx={{ margin: 0, padding: 0 }} >
                     <DrawerCloseButton sx={{ marginTop: 1, fontSize: 15, marginTop: 2 }} />
                     <DrawerHeader borderBottomWidth='1px'>
-                        <Link to='/' style={{ display: "flex", gap: 5, textDecoration: 'none' }}>
-                            <img src='/img/icon/icon-02-primary.png' style={{ height: 30, width: 30 }} alt='logo' />
-                            <div style={{ fontWeight: 500, fontSize: 18, marginTop: 2 }} >
-                                Pioneers of Lic
+                        <Link href='/admin' style={{ display: "flex", gap: 5, textDecoration: 'none' }}>
+                            <Image src={"/images/favicon.png"} height={35} width={35} style={{marginTop:'-5px',marginLeft:'-12px'}} />
+                            <div style={{ fontWeight: 'bold', fontSize: 18, marginTop: 2 }} >
+                                Jya Trades
                             </div>
                         </Link>
                     </DrawerHeader>

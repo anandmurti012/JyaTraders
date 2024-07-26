@@ -4,11 +4,8 @@ import { Box, Accordion, AccordionItem, AccordionButton, AccordionPanel, Accordi
 import './css/sidebarcontent.css'
 import { LuLayoutDashboard } from "react-icons/lu";
 import { CiPlay1 } from "react-icons/ci";
-import { PiTarget } from "react-icons/pi";
 import { BiPurchaseTagAlt } from "react-icons/bi";
 import { TbUsersGroup } from "react-icons/tb";
-import { BsCartCheck } from "react-icons/bs";
-import { FaWpforms } from "react-icons/fa";
 import Link from "next/link"
 import Image from 'next/image'
 
@@ -109,7 +106,7 @@ const SidebarContent = ({ onCloseDrawer }) => {
                                 <div style={{ display: 'flex', verticalAlign: 'middle', alignItems: 'center', gap: 8, }}>
                                     <CiPlay1 />
                                     <span style={{ fontWeight: '600' }} >
-                                        Classes
+                                        Courses
                                     </span>
                                 </div>
                             </Box>
@@ -118,31 +115,26 @@ const SidebarContent = ({ onCloseDrawer }) => {
 
                         <Link onClick={() => { setActive(0); hideDrawer() }} href={'/admin/courses/add'} style={{ textDecoration: 'none' }} >
                             <AccordionPanel style={styles.subOption}>
-                                Add Classes
+                                Add Courses
                             </AccordionPanel>
                         </Link>
 
                         <Link onClick={() => { setActive(0); hideDrawer() }} href={'/admin/courses/view'} style={{ textDecoration: 'none' }}>
                             <AccordionPanel style={styles.subOption}>
-                                View Classes
+                                View Courses
                             </AccordionPanel>
                         </Link>
                     </AccordionItem>
                 </Accordion>
 
-                <Link onClick={() => { setActive(4); hideDrawer() }} href="/setSubscription" style={active === 4 ? styles.activeSingleOption : styles.singleOption}>
+                <Link onClick={() => { setActive(4); hideDrawer() }} href="/admin/subscription" style={active === 4 ? styles.activeSingleOption : styles.singleOption}>
                     <BiPurchaseTagAlt />
                     <span style={{ fontWeight: '500' }} > Subscription </span>
                 </Link>
 
-                <Link onClick={() => { setActive(5); hideDrawer() }} href="/viewUsers" style={active === 5 ? styles.activeSingleOption : styles.singleOption}>
+                <Link onClick={() => { setActive(5); hideDrawer() }} href="/admin/users" style={active === 5 ? styles.activeSingleOption : styles.singleOption}>
                     <TbUsersGroup />
                     <span style={{ fontWeight: '500' }} > View Users </span>
-                </Link>
-
-                <Link onClick={() => { setActive(6); hideDrawer() }} href="/viewPurchaseHistory" style={active === 6 ? styles.activeSingleOption : styles.singleOption}>
-                    <BsCartCheck />
-                    <span style={{ fontWeight: '500' }} > Purchase History </span>
                 </Link>
 
 
