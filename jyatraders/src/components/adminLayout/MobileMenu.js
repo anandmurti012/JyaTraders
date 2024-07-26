@@ -41,7 +41,7 @@ export default function MobileMenu() {
                     <DrawerHeader borderBottomWidth='1px'>
                         <Link href='/admin' style={{ display: "flex", gap: 5, textDecoration: 'none' }}>
                             <Image src={"/images/favicon.png"} height={35} width={35} style={{marginTop:'-5px',marginLeft:'-12px'}} />
-                            <div style={{ fontWeight: 'bold', fontSize: 18, marginTop: 2 }} >
+                            <div style={{ fontWeight: 'bold', fontSize: 18 }} >
                                 Jya Trades
                             </div>
                         </Link>
