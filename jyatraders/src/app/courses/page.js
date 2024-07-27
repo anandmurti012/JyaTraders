@@ -1,10 +1,12 @@
-"use client"
+ "use client";
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import styles from './CoursesSection.module.css';
-import { Link } from '@chakra-ui/react';
+import { Link as ChakraLink } from '@chakra-ui/react';
 
 const CoursesSection = () => {
   const [courses, setCourses] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     // Fetch or define your courses data here
@@ -17,6 +19,10 @@ const CoursesSection = () => {
     setCourses(fetchedCourses);
   }, []);
 
+  const handleCourseClick = (id) => {
+    router.push(`/course/${id}`);
+  };
+
   return (
     <section className={styles.aboutSection}>
       <div className={styles.container}>
@@ -24,12 +30,11 @@ const CoursesSection = () => {
         <div className="row">
           {courses.map(course => (
             <div key={course.id} className="col-md-4 mb-4">
-              <Link className='textDecor' href='/courses/lecture'>
+              <ChakraLink className='textDecor' onClick={() => handleCourseClick(course.id)}>
                 <div className={`card ${styles.courseCard}`}>
                   <div className={styles.cardImageContainer}>
                     <img src={course.image} className={`card-img-top ${styles.cardImage}`} alt={course.title} />
                   </div>
-
                   <div className={`card-body ${styles.cardBody}`}>
                     <h5 className={`card-title ${styles.cardTitle}`}>{course.title}</h5>
                     <p className={`card-text ${styles.cardText}`}>{course.description}</p>
@@ -37,14 +42,13 @@ const CoursesSection = () => {
                     <button className={`btn ${styles.enrollButton}`}>Enroll Now</button>
                   </div>
                 </div>
-              </Link>
-
+              </ChakraLink>
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default CoursesSection;
