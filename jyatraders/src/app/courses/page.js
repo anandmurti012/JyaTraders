@@ -1,8 +1,8 @@
- "use client";
+"use client";
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './CoursesSection.module.css';
-import { Link as ChakraLink } from '@chakra-ui/react';
+import Link from 'next/link'
 
 const CoursesSection = () => {
   const [courses, setCourses] = useState([]);
@@ -20,7 +20,7 @@ const CoursesSection = () => {
   }, []);
 
   const handleCourseClick = (id) => {
-    router.push(`/course/${id}`);
+    router.push(`/courses/${id}`);
   };
 
   return (
@@ -30,7 +30,7 @@ const CoursesSection = () => {
         <div className="row">
           {courses.map(course => (
             <div key={course.id} className="col-md-4 mb-4">
-              <ChakraLink className='textDecor' onClick={() => handleCourseClick(course.id)}>
+              <Link href={`/courses/${course.id}`} className='textDecor'>
                 <div className={`card ${styles.courseCard}`}>
                   <div className={styles.cardImageContainer}>
                     <img src={course.image} className={`card-img-top ${styles.cardImage}`} alt={course.title} />
@@ -42,7 +42,7 @@ const CoursesSection = () => {
                     <button className={`btn ${styles.enrollButton}`}>Enroll Now</button>
                   </div>
                 </div>
-              </ChakraLink>
+              </Link>
             </div>
           ))}
         </div>
