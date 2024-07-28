@@ -26,7 +26,7 @@ const CoursesSection = () => {
   return (
     <section className={styles.aboutSection}>
       <div className={styles.container}>
-        <h1 className={styles.heading}>Enroll Courses</h1>
+        <h1 className={styles.heading}>Enroll Coursess</h1>
         <div className="row">
           {courses.map(course => (
             <div key={course.id} className="col-md-4 mb-4">
