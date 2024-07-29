@@ -1,0 +1,61 @@
+.aboutSection {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+    margin-top: 150px;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #343a40;
+}
+
+.courseCard {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.courseCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+    height: 200px;
+}
+
+.cardBody {
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.cardText {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #6c757d;
+}
+
+.cardPrice {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #28a745;
+}
+
+

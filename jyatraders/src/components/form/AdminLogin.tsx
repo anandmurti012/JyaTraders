@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'
 const AdminLogin = ({ onClose }) => {
 
     const router = useRouter()
-    
+
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
     const [data, setData] = useState({
@@ -20,6 +20,8 @@ const AdminLogin = ({ onClose }) => {
         const { name, value } = e.target;
         setData({ ...data, [name]: value });
     };
+
+    const [isLoading, setIsLoading] = useState(false)
 
     const handleSubmit = async () => {
         try {
@@ -47,9 +49,12 @@ const AdminLogin = ({ onClose }) => {
                     theme: "colored",
                 });
             } else {
+                setIsLoading(true)
                 await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/admin/login`, data)
                     .then(response => {
-                        console.log("res=============>", response);
+                        // console.log("res=============>", response);
+                        onClose();
+                        setIsLoading(false)
                         router.push('/admin')
 
                         toast.success(response.data.msg, {
@@ -64,6 +69,8 @@ const AdminLogin = ({ onClose }) => {
                         });
                     })
                     .catch(error => {
+                        onClose();
+                        setIsLoading(false)
                         toast.error(error.response.data.msg, {
                             position: "top-center",
                             autoClose: 4000,
@@ -75,7 +82,6 @@ const AdminLogin = ({ onClose }) => {
                             theme: "colored",
                         });
                     });
-                onClose();
             }
         } catch (error) {
             console.log(error)
@@ -102,6 +108,8 @@ const AdminLogin = ({ onClose }) => {
 
             <div style={{ marginTop: '30px' }} >
                 <Button
+                    isLoading={isLoading}
+                    loadingText={'Login..'}
                     style={{
                         background: '#0054FD',
                         color: "#fff",

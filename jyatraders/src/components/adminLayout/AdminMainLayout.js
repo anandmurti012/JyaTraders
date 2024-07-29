@@ -5,7 +5,7 @@ import LeftSideBar from './LeftSideBar'
 export default function AdminMainLayout({ children }) {
     return (
         <>
-            <div className='mainDashBody' style={{ background: "#eee" }}>
+            <div className='mainDashBody' style={{ background: "#F8F9FA" }}>
                 <div id='leftSide'>
                     <LeftSideBar />
                 </div>

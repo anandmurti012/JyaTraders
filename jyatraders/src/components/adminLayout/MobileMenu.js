@@ -22,7 +22,7 @@ export default function MobileMenu() {
         <>
             <div className='ml-2' >
                 <Link href=""
-                    colorScheme='teal' onClick={onOpen}>
+                    onClick={onOpen}>
                     <VscThreeBars fontSize={25} />
                 </Link>
             </div>

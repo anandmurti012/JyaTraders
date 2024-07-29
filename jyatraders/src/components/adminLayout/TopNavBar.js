@@ -22,19 +22,8 @@ export default function TopNavBar() {
     const Logout = async () => {
         await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/admin/logout`, {})
             .then(response => {
-
                 router.push('/')
                 window.location.reload()
-                // toast.success(response.data.msg, {
-                //     position: "top-center",
-                //     autoClose: 2000,
-                //     hideProgressBar: false,
-                //     closeOnClick: true,
-                //     pauseOnHover: true,
-                //     draggable: true,
-                //     progress: undefined,
-                //     theme: "colored",
-                // });
             })
             .catch(error => {
                 toast.error('Logout Error..', {

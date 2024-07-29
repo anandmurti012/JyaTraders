@@ -16,7 +16,7 @@ import "../assets/css/style.css"
 import "../assets/css/responsive.css"
 
 import { ChakraProvider } from '@chakra-ui/react'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -39,6 +39,7 @@ export default function RootLayout({ children }) {
         <ChakraProvider>
           {children}
         </ChakraProvider>
+        
         <ToastContainer
           position="top-right"
           autoClose={5000}
