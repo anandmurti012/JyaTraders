@@ -29,8 +29,16 @@ export async function POST(request: NextRequest, response: NextResponse) {
     return Response.json({ msg: 'Successfully Uploaded' }, { status: 201 });
 }
 
-export async function GET(request: NextRequest, response: NextResponse) {
+export async function GET(request: NextRequest) {
 
-    const [results] = await connection.query(`SELECT * FROM courses`);
-    return Response.json({ results: results, msg: 'Successfully Uploaded' }, { status: 200 });
+    // Extract the 'id' parameter from the query string
+    const id = request.nextUrl.searchParams.get('id');
+
+    if (id) {
+        const [results] = await connection.query(`SELECT * FROM courses WHERE id=${id}`);
+        return Response.json({ results: results[0], msg: 'Successfully Fetched' }, { status: 200 });
+    } else {
+        const [results] = await connection.query(`SELECT * FROM courses`);
+        return Response.json({ results: results, msg: 'Successfully Fetched' }, { status: 200 });
+    }
 }
