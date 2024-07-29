@@ -24,7 +24,7 @@ export default function TopNavBar() {
             .then(response => {
 
                 router.push('/')
-
+                window.location.reload()
                 // toast.success(response.data.msg, {
                 //     position: "top-center",
                 //     autoClose: 2000,

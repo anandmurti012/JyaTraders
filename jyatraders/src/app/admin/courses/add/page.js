@@ -13,10 +13,10 @@ export default function AddCourses() {
 
     const [data, setData] = useState({
         title: '',
-        price: '0',
+        price: '',
         description: '',
         image: '',
-        validity: '',
+        validity: '0',
         link: ''
     });
 
@@ -31,17 +31,19 @@ export default function AddCourses() {
 
     const clearData = () => {
         setData({
-            ...data,
             title: '',
             price: '',
             description: '',
             image: '',
-            validity: 1
-        })
-    }
-
+            validity: '0',
+            link: ''
+        });
+        if (ref.current) {
+            ref.current.value = '';
+        }
+    };
     const submitData = async () => {
-        const { title, price, image } = data;
+        const { title, price, description, image, validity, link } = data;
         if (!title) {
             toast.warn('Enter Course title', {
                 position: "top-center",
@@ -65,10 +67,32 @@ export default function AddCourses() {
                 progress: undefined,
                 theme: "colored",
             });
+        } else if (!price) {
+            toast.warn('Enter Price', {
+                position: "top-center",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
+        } else if (!link) {
+            toast.warn('Enter Course Link', {
+                position: "top-center",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
         } else {
-            setIsLoading(true);
+            // setIsLoading(true);
             const formData = new FormData();
-            formData.append('image', data.image, data.image.name);
+            formData.append('image', data.image, Date.now() + data.image.name);
             formData.append('title', data.title);
             formData.append('price', data.price);
             formData.append('description', data.description);
@@ -76,16 +100,30 @@ export default function AddCourses() {
             formData.append('link', data.link);
             try {
                 setIsLoading(true);
-                await axios.post(`${process.env.REACT_APP_APIURL}/api/admins/add-courses`, formData,
+                await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/admin/courses`, formData,
                     {
                         headers: {
                             'Content-Type': 'multipart/form-data',
-                            'Authorization': token
+                            'Authorization': ''
                         }
                     }
                 ).then(response => {
                     setIsLoading(false);
+                    clearData()
+                    toast.success(response.data.msg, {
+                        position: "top-center",
+                        autoClose: 4000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                    });
+                    // after submit clear  all input field
+
                 }).catch(error => {
+                    setIsLoading(false);
                     console.log(error)
                 });
 
