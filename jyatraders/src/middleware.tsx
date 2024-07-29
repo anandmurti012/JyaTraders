@@ -5,14 +5,16 @@ export const middleware = (request: NextRequest) => {
 
     const isPublicPath = path === '/' || path === '/apply' || path === '/services' || path === '/about';
 
-    const token = request.cookies.get('token');
-    const role = "admin"; // assuming the role is stored in cookies
+    const token = request.cookies.get('jts_token')?.value;
+    const role = request.cookies.get('jts_role')?.value;
 
     if (isPublicPath && token) {
         if (role === 'admin') {
             return NextResponse.redirect(new URL('/admin', request.nextUrl));
         } else if (role === 'user') {
             return NextResponse.redirect(new URL('/user', request.nextUrl));
+        } else {
+            return NextResponse.redirect(new URL('/', request.nextUrl));
         }
     }
 
@@ -26,7 +28,7 @@ export const middleware = (request: NextRequest) => {
             return NextResponse.redirect(new URL('/user', request.nextUrl));
         } else if (path.startsWith('/user') && role !== 'user') {
             return NextResponse.redirect(new URL('/admin', request.nextUrl));
-        }       
+        }
     }
 
     return NextResponse.next();

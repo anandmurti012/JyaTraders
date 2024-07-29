@@ -83,12 +83,12 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                         </div>
                                         <div className="header-action">
                                             <ul className="list-wrap">
-                                                <li className="header-contact-two">                                                
+                                                <li className="header-contact-two">
                                                     <ApplyForm btnStyle={2} />
+
+                                                    <div  className='ml-3'><Login /></div>
                                                 </li>
-                                                <li className="header-contact-two">                                                
-                                                    <Login />
-                                                </li>
+
                                                 <li className="offcanvas-menu" onClick={handleOffcanvus}>
                                                     <Link href="#" className="menu-tigger menu-tigger2">
                                                         <span />

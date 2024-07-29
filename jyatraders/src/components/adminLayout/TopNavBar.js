@@ -11,15 +11,43 @@ import MobileMenu from './MobileMenu';
 import Link from "next/link"
 import { MdFormatAlignLeft } from "react-icons/md";
 import Image from 'next/image'
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation'
 
 
 export default function TopNavBar() {
-    const admin ={}
+    const router = useRouter()
 
-    const Logout = () => {
-        // persistor.purge().then(() => {
-        //     window.location.reload();
-        // });
+    const Logout = async () => {
+        await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/admin/logout`, {})
+            .then(response => {
+
+                router.push('/')
+
+                // toast.success(response.data.msg, {
+                //     position: "top-center",
+                //     autoClose: 2000,
+                //     hideProgressBar: false,
+                //     closeOnClick: true,
+                //     pauseOnHover: true,
+                //     draggable: true,
+                //     progress: undefined,
+                //     theme: "colored",
+                // });
+            })
+            .catch(error => {
+                toast.error('Logout Error..', {
+                    position: "top-center",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+            });
     }
 
     const [isExpand, setisExpand] = useState(true);
@@ -78,7 +106,7 @@ export default function TopNavBar() {
                 </div>
 
                 <button className='mobile-none' onClick={() => { toggleSideButton() }}  >
-                   <MdFormatAlignLeft style={{fontSize:'24px'}} />
+                    <MdFormatAlignLeft style={{ fontSize: '24px' }} />
                 </button>
             </div>
 

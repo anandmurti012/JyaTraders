@@ -13,10 +13,11 @@ export default function AddCourses() {
 
     const [data, setData] = useState({
         title: '',
-        price: 0,
+        price: '0',
         description: '',
         image: '',
-        validity: 1
+        validity: '',
+        link: ''
     });
 
     const inputData = (e) => {
@@ -72,7 +73,7 @@ export default function AddCourses() {
             formData.append('price', data.price);
             formData.append('description', data.description);
             formData.append('validity', data.validity);
-
+            formData.append('link', data.link);
             try {
                 setIsLoading(true);
                 await axios.post(`${process.env.REACT_APP_APIURL}/api/admins/add-courses`, formData,
@@ -131,8 +132,8 @@ export default function AddCourses() {
                             className='form-control'
                             placeholder={'₹'}
                             type='number'
-                            name='title'
-                            value={data.title}
+                            name='price'
+                            value={data.price}
                             onChange={inputData}
                         />
                     </div>
@@ -157,10 +158,24 @@ export default function AddCourses() {
                         <input
                             className='form-control'
                             placeholder={'Link'}
-                            name='title'
-                            value={data.title}
+                            name='link'
+                            value={data.link}
                             onChange={inputData}
                         />
+                    </div>
+                </div>
+
+                <div className='col-12 mt-2 col-sm-6 col-md-4'>
+                    <div className='form-group'>
+                        <label className='label'>Validity <span style={{ color: 'red' }}>*</span></label>
+                        <select name='validity' onChange={inputData} class="form-select mb-3" aria-label="Large select example">
+                            <option value="0" selected>No Expire</option>
+                            <option value="1">1 Month</option>
+                            <option value="3">3 Month</option>
+                            <option value="6">6 Month</option>
+                            <option value="12">1 Year</option>
+                            <option value="24">2 Year</option>
+                        </select>
                     </div>
                 </div>
             </div>
