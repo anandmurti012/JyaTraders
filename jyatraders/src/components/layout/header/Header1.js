@@ -79,6 +79,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                                 <li className={pathname === '/services' ? 'active' : ''}><Link href="/services">Services</Link></li>
                                                 <li className={pathname === '/courses' ? 'active' : ''}><Link href="/courses">Courses</Link></li>
                                                 <li className={pathname === '/contact' ? 'active' : ''}><Link href="/contact">Contact Us</Link></li>
+                                                <li className={pathname === '/subscription' ? 'active' : ''}><Link href="/subscription">Get Subscription</Link></li>
                                             </ul>
                                         </div>
                                         <div className="header-action">
