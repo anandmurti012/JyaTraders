@@ -1,17 +1,19 @@
 import React from 'react';
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
+import { Breadcrumb, BreadcrumbItem } from '@chakra-ui/react';
 import Link from 'next/link'
-export default function BreadcrumbComponent({ currentpage }) {
+export default function BreadcrumbComponent({ pages }) {
     return (
-        <Breadcrumb className='mt-2' >
-            <BreadcrumbItem>
-                <Link style={{color:'blue'}} href='/admin'>Dashboard</Link>
-            </BreadcrumbItem>
-
-            <BreadcrumbItem>
-                <Link href='#'>{currentpage}</Link>
-            </BreadcrumbItem>
-        </Breadcrumb>
+        <div className='mt-4' >
+            <Breadcrumb>
+                {
+                    pages.map((e, i) => (
+                        <BreadcrumbItem key={i}>
+                            <Link style={{ color: e.active ? 'blue' : 'black' }} href={e.link}>{e.page}</Link>
+                        </BreadcrumbItem>
+                    ))
+                }
+            </Breadcrumb>
+        </div>
     );
 };
 

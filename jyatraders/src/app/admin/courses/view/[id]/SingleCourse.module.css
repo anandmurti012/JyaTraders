@@ -1,0 +1,39 @@
+ /* SingleCourse.module.css */
+
+ .singleCourseContainer {
+     padding: 20px;
+ }
+
+ .courseTitle {
+     font-size: 2rem;
+     margin-bottom: 20px;
+ }
+
+ .courseImage {
+     width: 100%;
+     height: auto;
+     margin-bottom: 20px;
+ }
+
+ .courseDescription {
+     font-size: 1.2rem;
+     margin-bottom: 20px;
+ }
+
+ .coursePrice {
+     font-size: 1.5rem;
+     margin-bottom: 20px;
+ }
+
+ .enrollButton {
+     background-color: #4CAF50;
+     color: white;
+     padding: 10px 20px;
+     border: none;
+     cursor: pointer;
+     text-transform: uppercase;
+ }
+
+ .enrollButton:hover {
+     background-color: #45a049;
+ }

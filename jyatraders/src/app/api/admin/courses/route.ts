@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { writeFile } from 'fs/promises'
-import path from "path";
 import connection from "../../../../lib/db";
 
 export async function POST(request: NextRequest, response: NextResponse) {
@@ -28,4 +27,10 @@ export async function POST(request: NextRequest, response: NextResponse) {
     // Insert into database using your connection
     connection.query('INSERT INTO courses SET ?', newData);
     return Response.json({ msg: 'Successfully Uploaded' }, { status: 201 });
+}
+
+export async function GET(request: NextRequest, response: NextResponse) {
+
+    const [results] = await connection.query(`SELECT * FROM courses`);
+    return Response.json({ results: results, msg: 'Successfully Uploaded' }, { status: 200 });
 }

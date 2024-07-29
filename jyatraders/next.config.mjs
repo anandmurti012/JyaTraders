@@ -8,7 +8,7 @@ const nextConfig = {
     // },
     images: {
         domains: [
-            'localhost:3000','cdn-icons-png.flaticon.com'
+            '127.0.0.1:3000','cdn-icons-png.flaticon.com'
         ]
     },
 
