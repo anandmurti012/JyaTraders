@@ -10,6 +10,8 @@ const UsrLogin = ({ onClose }) => {
 
     const router = useRouter()
 
+    const [isLoading, setIsLoading] = useState(false)
+
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
     const [data, setData] = useState({
@@ -22,63 +24,62 @@ const UsrLogin = ({ onClose }) => {
     };
 
     const handleSubmit = async () => {
-        try {
-            const { email, password } = data
-            if (!email) {
-                toast.warn('Enter Email Id', {
-                    position: "top-center",
-                    autoClose: 4000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "colored",
-                });
-            } else if (!password) {
-                toast.warn('Enter Password', {
-                    position: "top-center",
-                    autoClose: 4000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "colored",
-                });
-            } else {
-                await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/users/login`, data)
-                    .then(response => {
-                        onClose();
-                        console.log("res=============>", response);
-                        router.push('/users');
-                        
-                        toast.success(response.data.msg, {
-                            position: "top-center",
-                            autoClose: 2000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                            theme: "colored",
-                        });
-                    })
-                    .catch(error => {
-                        toast.error(error.response.data.msg, {
-                            position: "top-center",
-                            autoClose: 4000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                            theme: "colored",
-                        });
+        const { email, password } = data
+        if (!email) {
+            toast.warn('Enter Email Id', {
+                position: "top-center",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
+        } else if (!password) {
+            toast.warn('Enter Password', {
+                position: "top-center",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
+        } else {
+            setIsLoading(true)
+            await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/users/login`, data)
+                .then(response => {
+                    setIsLoading(false)
+                    onClose();
+                    console.log("res=============>", response);
+                    router.push('/users');
+
+                    toast.success(response.data.msg, {
+                        position: "top-center",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
                     });
-            }
-        } catch (error) {
-            console.log(error)
+                })
+                .catch(error => {
+                    setIsLoading(false)
+                    toast.error(error.response.data.msg, {
+                        position: "top-center",
+                        autoClose: 4000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                    });
+                });
         }
     };
     return (
@@ -96,7 +97,12 @@ const UsrLogin = ({ onClose }) => {
                 <Input name="password"
                     type="password"
                     value={data.password}
-                    onChange={inputData} placeholder='Enter your password' />
+                    onChange={inputData} placeholder='Enter your password'
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                            handleSubmit()
+                        }
+                    }} />
             </FormControl>
 
             <div style={{ marginTop: '5px', marginLeft: '2px' }} >
@@ -114,6 +120,8 @@ const UsrLogin = ({ onClose }) => {
                         paddingBottom: '2px',
                         width: '100%'
                     }}
+                    isLoading={isLoading}
+                    loadingText={'Login..'}
 
                     onClick={handleSubmit} colorScheme='blue'>
                     Login

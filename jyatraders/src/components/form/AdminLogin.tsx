@@ -13,8 +13,8 @@ const AdminLogin = ({ onClose }) => {
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
     const [data, setData] = useState({
-        email: 'jyatrades@gmail.com',
-        password: 'jya@admin'
+        email: '',
+        password: ''
     });
     const inputData = (e) => {
         const { name, value } = e.target;
@@ -103,7 +103,13 @@ const AdminLogin = ({ onClose }) => {
                 <Input name="password"
                     type="password"
                     value={data.password}
-                    onChange={inputData} placeholder='Enter your password' />
+                    onChange={inputData} placeholder='Enter your password'
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                            handleSubmit()
+                        }
+                    }}
+                />
             </FormControl>
 
             <div style={{ marginTop: '30px' }} >
