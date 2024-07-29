@@ -14,11 +14,10 @@ import {
 import axios from 'axios';
 
 const ApplyForm = ({ btnStyle }) => {
-
     const toast = useToast();
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [isLoadingButton, setIsLoadingButton] = useState(false);
-    const [errors, setErrors] = useState({}); // State to hold validation errors
+    const [errors, setErrors] = useState({});
 
     const [data, setData] = useState({
         fullName: '',
@@ -26,14 +25,15 @@ const ApplyForm = ({ btnStyle }) => {
         email: '',
         mobile: '',
         address: '',
-        profession: ''
+        profession: '',
+        password: '',
+        confirmPassword: ''
     });
 
     const validateForm = () => {
         let valid = true;
         const newErrors = {};
 
-        // Validate each field
         if (data.fullName.trim() === '') {
             newErrors.fullName = 'Full Name is required';
             valid = false;
@@ -60,6 +60,19 @@ const ApplyForm = ({ btnStyle }) => {
             valid = false;
         }
 
+        if (data.password.trim() === '') {
+            newErrors.password = 'Password is required';
+            valid = false;
+        }
+
+        if (data.confirmPassword.trim() === '') {
+            newErrors.confirmPassword = 'Confirm Password is required';
+            valid = false;
+        } else if (data.password !== data.confirmPassword) {
+            newErrors.confirmPassword = 'Passwords do not match';
+            valid = false;
+        }
+
         setErrors(newErrors);
         return valid;
     };
@@ -70,84 +83,74 @@ const ApplyForm = ({ btnStyle }) => {
     };
 
     const handleSubmit = async () => {
-        try {
-            if (!validateForm()) {
-                return;
-            }
+        if (!validateForm()) {
+            return;
+        }
 
-            setIsLoadingButton(true);
+        setIsLoadingButton(true);
+        await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/users`, data)
+            .then(response => {
+                setIsLoadingButton(false);
+                setData({
+                    fullName: '',
+                    gender: '',
+                    email: '',
+                    mobile: '',
+                    address: '',
+                    profession: '',
+                    password: '',
+                    confirmPassword: ''
+                });
 
-            await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/apply`, data)
-                .then(response => {
-                    setIsLoadingButton(false);
-                    setData({
-                        ...data,
-                        fullName: '',
-                        gender: '',
-                        email: '',
-                        mobile: '',
-                        address: '',
-                        profession: ''
-                    });
-
+                toast({
+                    title: response.data.msg,
+                    status: 'success',
+                    duration: 4000,
+                    isClosable: true,
+                    position: 'top'
+                });
+                onClose();
+            }).catch(error => {
+                if (error?.response?.status === 409) {
                     toast({
-                        title: response.data.msg,
-                        // description: "We've collected your request. We will contact you shortly.",
-                        status: 'success',
-                        duration: 4000,
-                        isClosable: true,
-                        position: 'top'
-                    });
-                })
-                .catch(error => {
-                    console.error(error);
-                    console.error('Submission error:', error);
-                    toast({
-                        title: 'Submission Failed',
-                        description: 'Failed to submit your request. Please try again later.',
+                        title: error?.response?.data?.msg || 'Submission Failed',
                         status: 'error',
                         duration: 4000,
                         isClosable: true,
                         position: 'top'
                     });
-                });
-
-
-
-            setIsLoadingButton(false);
-            onClose();
-        } catch (error) {
-            console.log(error)
-            onClose();
-        }
+                    setIsLoadingButton(false);
+                }
+                setIsLoadingButton(false);
+            })
     };
 
     return (
         <>
-            {
-                btnStyle === 1 ?
-                    <button
-                        onClick={onOpen}
-                        className="btn"
-                        data-aos="fade-right"
-                        data-aos-delay={700}>
-                        Apply Now
-                    </button>
-                    :
-                    <button
-                        onClick={onOpen}
-                        style={{
-                            background: '#0054FD',
-                            color: "#fff",
-                            height: 42,
-                            padding: '0px 25px',
-                            borderRadius: '100px',
-                            paddingBottom: '2px'
-                        }}
-                    >
-                        Apply Now
-                    </button>
-            }
+            {btnStyle === 1 ? (
+                <button
+                    onClick={onOpen}
+                    className="btn"
+                    data-aos="fade-right"
+                    data-aos-delay={700}
+                >
+                    Apply Now
+                </button>
+            ) : (
+                <button
+                    onClick={onOpen}
+                    style={{
+                        background: '#0054FD',
+                        color: '#fff',
+                        height: 42,
+                        padding: '0px 25px',
+                        borderRadius: '100px',
+                        paddingBottom: '2px'
+                    }}
+                >
+                    Apply Now
+                </button>
+            )}
 
             <Modal onClose={onClose} size={'xl'} isOpen={isOpen}>
                 <ModalOverlay />
@@ -168,8 +171,7 @@ const ApplyForm = ({ btnStyle }) => {
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 mt-2">
                                 <label>Mobile</label>
-                                <input name='mobile' type='number' onChange={inputData} value={data.mobile} className="form-control"
-                                    maxLength="10" />
+                                <input name='mobile' type='tel' onChange={inputData} value={data.mobile} className="form-control" maxLength="10" />
                                 {errors.mobile && <span className="text-danger" style={{ fontSize: '14px' }}>{errors.mobile}</span>}
                             </div>
                             <div className="col-12 col-sm-12 col-md-6 mt-2">
@@ -192,6 +194,16 @@ const ApplyForm = ({ btnStyle }) => {
                                 <input name='profession' onChange={inputData} value={data.profession} className="form-control" type="text" />
                             </div>
 
+                            <div className="col-12 col-sm-12 col-md-6 mt-2">
+                                <label>Password</label>
+                                <input name='password' onChange={inputData} value={data.password} className="form-control" type="password" />
+                                {errors.password && <span className="text-danger" style={{ fontSize: '14px' }}>{errors.password}</span>}
+                            </div>
+                            <div className="col-12 col-sm-12 col-md-6 mt-2">
+                                <label>Confirm Password</label>
+                                <input name='confirmPassword' onChange={inputData} value={data.confirmPassword} className="form-control" type="password" />
+                                {errors.confirmPassword && <span className="text-danger" style={{ fontSize: '14px' }}>{errors.confirmPassword}</span>}
+                            </div>
                         </div>
                     </ModalBody>
                     <ModalFooter>
@@ -199,7 +211,7 @@ const ApplyForm = ({ btnStyle }) => {
                             isLoading={isLoadingButton}
                             style={{
                                 background: '#0054FD',
-                                color: "#fff",
+                                color: '#fff',
                                 height: 40,
                                 padding: '0px 20px',
                                 borderRadius: '10px'

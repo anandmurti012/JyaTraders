@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation'
-
+import Link from 'next/link'
 
 const UsrLogin = ({ onClose }) => {
 
@@ -13,8 +13,8 @@ const UsrLogin = ({ onClose }) => {
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
     const [data, setData] = useState({
-        email: 'jyatrades@gmail.com',
-        password: 'jya@admin'
+        email: '',
+        password: ''
     });
     const inputData = (e) => {
         const { name, value } = e.target;
@@ -47,11 +47,12 @@ const UsrLogin = ({ onClose }) => {
                     theme: "colored",
                 });
             } else {
-                await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/admin/login`, data)
+                await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/users/login`, data)
                     .then(response => {
+                        onClose();
                         console.log("res=============>", response);
-                        router.push('/admin')
-
+                        router.push('/users');
+                        
                         toast.success(response.data.msg, {
                             position: "top-center",
                             autoClose: 2000,
@@ -75,11 +76,9 @@ const UsrLogin = ({ onClose }) => {
                             theme: "colored",
                         });
                     });
-                onClose();
             }
         } catch (error) {
             console.log(error)
-            onClose();
         }
     };
     return (
@@ -99,6 +98,10 @@ const UsrLogin = ({ onClose }) => {
                     value={data.password}
                     onChange={inputData} placeholder='Enter your password' />
             </FormControl>
+
+            <div style={{ marginTop: '5px', marginLeft: '2px' }} >
+                <Link style={{ color: 'blue' }} href={'/forgotpassword'}>Forgot Password?</Link>
+            </div>
 
             <div style={{ marginTop: '30px' }} >
                 <Button

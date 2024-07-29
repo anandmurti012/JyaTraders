@@ -1,5 +1,5 @@
-export default function Users() {
+export default function UsersDashboard() {
     return (
-        <h2>Dashboard</h2>
+        <h2>User Dashboard</h2>
     )
 }

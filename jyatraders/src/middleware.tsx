@@ -12,7 +12,7 @@ export const middleware = (request: NextRequest) => {
         if (role === 'admin') {
             return NextResponse.redirect(new URL('/admin', request.nextUrl));
         } else if (role === 'user') {
-            return NextResponse.redirect(new URL('/user', request.nextUrl));
+            return NextResponse.redirect(new URL('/users', request.nextUrl));
         } else {
             return NextResponse.redirect(new URL('/', request.nextUrl));
         }
@@ -25,8 +25,8 @@ export const middleware = (request: NextRequest) => {
     // Additional check to prevent users from accessing admin routes and vice versa
     if (!isPublicPath && token) {
         if (path.startsWith('/admin') && role !== 'admin') {
-            return NextResponse.redirect(new URL('/user', request.nextUrl));
-        } else if (path.startsWith('/user') && role !== 'user') {
+            return NextResponse.redirect(new URL('/users', request.nextUrl));
+        } else if (path.startsWith('/users') && role !== 'user') {
             return NextResponse.redirect(new URL('/admin', request.nextUrl));
         }
     }
@@ -42,6 +42,6 @@ export const config = {
         '/services',
         '/about',
         '/admin/:path*',
-        '/user/:path*'
+        '/users/:path*'
     ]
 }

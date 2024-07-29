@@ -14,6 +14,7 @@ import {
   Button,
 } from '@chakra-ui/react'
 import AdminLogin from './AdminLogin';
+import UsrLogin from './UserLogin';
 
 const Login = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -55,7 +56,7 @@ const Login = () => {
 
               <TabPanels>
                 <TabPanel>
-                  {/* <UserLogin onClose={onClose} /> */}
+                  <UsrLogin onClose={onClose} />
                 </TabPanel>
                 <TabPanel style={{paddingTop:0,paddingBottom:0}} >
                   <AdminLogin onClose={onClose} />
